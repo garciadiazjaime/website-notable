@@ -23,12 +23,15 @@ export default class AppHandler extends React.Component {
     this.scrollHandler(true);
     window.addEventListener('scroll', this.onScroll, false);
     // this.googleAnalytics();
-    if (!_.isEmpty(this.state.data)) {
+    if (_.isEmpty(this.state.data)) {
       this.loadData();
     }
   }
 
   componentWillReceiveProps() {
+    this.setState({
+      data: {},
+    });
     this.loadData();
   }
 
@@ -137,7 +140,6 @@ export default class AppHandler extends React.Component {
     const children = React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, { data: this.state.data });
     });
-
     return (<div>
       <MainMenu items={sitemap.items.children} icons={sitemap.icons} onClick={this.clickHandler} />
       {children}
