@@ -1,7 +1,7 @@
 Website Boilerplate
 ----
 
-[![Build Status](https://travis-ci.org/garciadiazjaime/website-boilerplate.svg)](https://travis-ci.org/garciadiazjaime/website-boilerplate)
+[![Build Status](https://travis-ci.org/garciadiazjaime/website-notable.svg)](https://travis-ci.org/garciadiazjaime/website-notable)
 
 Run project:
 ----
