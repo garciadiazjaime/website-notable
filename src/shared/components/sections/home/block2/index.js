@@ -41,5 +41,5 @@ export default class Block2 extends React.Component {
 }
 
 Block2.propTypes = {
-  data: React.PropTypes.object.isRequired,
+  data: React.PropTypes.object,
 };
