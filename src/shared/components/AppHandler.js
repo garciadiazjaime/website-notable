@@ -15,7 +15,7 @@ export default class AppHandler extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      data: context.data ? context.data : {},
+      data: context.data && context.data.blocks ? context.data.blocks : window._data.blocks,
     };
   }
 
@@ -23,7 +23,9 @@ export default class AppHandler extends React.Component {
     this.scrollHandler(true);
     window.addEventListener('scroll', this.onScroll, false);
     // this.googleAnalytics();
-    this.loadData();
+    if (!_.isEmpty(this.state.data)) {
+      this.loadData();
+    }
   }
 
   componentWillReceiveProps() {

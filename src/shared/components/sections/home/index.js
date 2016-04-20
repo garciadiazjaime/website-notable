@@ -11,11 +11,11 @@ import Block3 from './block3';
 export default class HomeSection extends React.Component {
 
   render() {
-    const { data } = this.props;
+    const { block1, block2, block3 } = this.props.data;
     return !_.isEmpty(this.props.data) ? (<div>
-      <Block1 data={data.block1} />
-      <Block2 data={data.block2} />
-      <Block3 data={data.block3} />
+      <Block1 data={block1} />
+      <Block2 data={block2} />
+      <Block3 data={block3} />
     </div>) : null;
   }
 }
