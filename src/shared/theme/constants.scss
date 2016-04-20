@@ -1,0 +1,16 @@
+@import './helpers';
+@import './mixins';
+@import './sprite';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
+
+$white: #fff;
+$black: #000;
+$darkGray: #222222;
+$gray: #6d6e71;
+
+$fontA: 'Open Sans', sans-serif;
+
+$isLaptop: "only screen and (min-width: 1024px)";
+$isTablet: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$isPhone: "only screen and (max-width: 767px)";
