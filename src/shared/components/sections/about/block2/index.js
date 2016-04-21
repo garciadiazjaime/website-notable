@@ -14,8 +14,8 @@ export default class Block2 extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-6 col-xs-12">
-            <h2>{titles.title1.content}</h2>
-            <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1.content)} />
+            <h2>{titles.title1}</h2>
+            <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
             <Link to={buttons.button1.href}>{buttons.button1.title}</Link>
           </div>
           <div className="col-sm-6 col-xs-12">

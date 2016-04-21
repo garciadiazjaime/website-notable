@@ -53,7 +53,7 @@ export default class AppHandler extends React.Component {
   }
 
   getBlocksData(data) {
-    const properties = ['slide_set', 'button_set', 'image_set', 'paragraph_set', 'title_set'];
+    const properties = ['slides', 'buttons', 'images', 'paragraphs', 'titles'];
     const response = {};
     if (_.isArray(data) && data.length) {
       data.map((item, index) => {
@@ -61,8 +61,7 @@ export default class AppHandler extends React.Component {
         response[key] = {};
         properties.map((prop) => {
           if (_.isArray(item[prop]) && item[prop].length) {
-            const newProp = prop.split('_')[0];
-            response[key][newProp + 's'] = newProp === 'slide' ? item[prop] : this.getDataLevelTwo(newProp, item[prop]);
+            response[key][prop] = prop === 'slides' ? item[prop] : this.getDataLevelTwo(prop, item[prop]);
           }
         });
       });
@@ -70,8 +69,9 @@ export default class AppHandler extends React.Component {
     return response;
   }
 
-  getDataLevelTwo(prop, data) {
+  getDataLevelTwo(props, data) {
     const response = {};
+    const prop = props.substring(0, props.length - 1);
     if (_.isArray(data) && data.length) {
       data.map((item, index) => {
         response[prop + (index + 1)] = item;

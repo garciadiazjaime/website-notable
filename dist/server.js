@@ -156,16 +156,12 @@
 	  var sectionId = getSectionId(_sitemap2.default, url);
 	  if (sectionId) {
 	    var promises = [];
-	    console.log('apiUrl', apiUrl);
-	    console.log('sectionId', sectionId);
 	    promises.push(new Promise(function (resolve, reject) {
 	      (0, _restClient2.default)({
 	        path: apiUrl + 'api/block/?section_id=' + sectionId
 	      }).then(function (response) {
-	        console.log('here', response);
 	        resolve(response.entity);
 	      }, function (response) {
-	        console.log('error', response);
 	        reject(response);
 	      });
 	    }));

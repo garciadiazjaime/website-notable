@@ -74,16 +74,12 @@ app.get('/*', (req, res, next) => {
   const sectionId = getSectionId(sitemap, url);
   if (sectionId) {
     const promises = [];
-    console.log('apiUrl', apiUrl);
-    console.log('sectionId', sectionId);
     promises.push(new Promise((resolve, reject) => {
       restClient({
         path: apiUrl + 'api/block/?section_id=' + sectionId,
       }).then((response) => {
-        console.log('here', response);
         resolve(response.entity);
       }, (response) => {
-        console.log('error', response);
         reject(response);
       });
     }));
