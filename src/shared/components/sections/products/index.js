@@ -3,7 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import Block1 from './block1';
-import Block2 from './block2';
+import Block2 from '../about/block1';
 import Block3 from './block3';
 import Block4 from './block4';
 
