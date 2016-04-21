@@ -16,6 +16,7 @@ export default class AppHandler extends React.Component {
     super(props, context);
     this.state = {
       data: context.data && context.data.blocks ? context.data.blocks : window._data.blocks,
+      cache: {},
     };
   }
 
@@ -96,16 +97,23 @@ export default class AppHandler extends React.Component {
     const bits = window.location.pathname.split('/');
     const url = bits[1] || 'inicio';
     const sectionId = this.getSectionId(sitemap, url);
-    promises.push(restClient({
-      path: window._apiUrl + 'api/block/?section_id=' + sectionId,
-    }));
+    if (_.isEmpty(this.state.cache[sectionId])) {
+      promises.push(restClient({
+        path: window._apiUrl + 'api/block/?section_id=' + sectionId,
+      }));
 
-    if (promises.length) {
-      Promise.all(promises).then((data) => {
-        const blocks = this.getBlocksData(data[0].entity);
-        this.setState({
-          data: blocks,
+      if (promises.length) {
+        Promise.all(promises).then((data) => {
+          const blocks = this.getBlocksData(data[0].entity);
+          const state = this.state;
+          state.data = blocks;
+          state.cache[sectionId] = blocks;
+          this.setState(state);
         });
+      }
+    } else {
+      this.setState({
+        data: this.state.cache[sectionId],
       });
     }
   }
