@@ -39,7 +39,7 @@ export default class MainMenu extends React.Component {
         <div className={style.bigBrand}>
         </div>
       </div>
-      <nav className={style.navbarDefault + ' navbar'} id="menu_wrapper">
+      <nav className={style.navbarDefault + ' navbar '} id="menu_wrapper">
         <div className="container-fluid">
           <div className="row">
             <div className={style.navbarHeader + ' navbar-header'}>
@@ -55,7 +55,7 @@ export default class MainMenu extends React.Component {
             </div>
 
             <div className={style.navbarCollapse + ' collapse navbar-collapse'} id='mainmenu'>
-              <ul className={style.navbarIcons}>
+              <ul className={style.navbarIcons + ' navbar-icons'}>
                 {this.getIcons(this.props.icons)}
               </ul>
               <ul className={style.navbarNav + ' nav navbar-nav'}>

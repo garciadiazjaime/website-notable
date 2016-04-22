@@ -26,6 +26,7 @@ $hamburger-background: lighten($blue, 10%)!important;
 }
 .navbarDefault {
   @include border-radius(0);
+  background-color: $background-color;
   height: $height;
   border: none!important;
   margin-bottom: 0;
@@ -44,12 +45,16 @@ $hamburger-background: lighten($blue, 10%)!important;
   @include sprite($sprites-brand);
   margin: 0 auto;
 }
+.hidden{
+  display: none;
+}
 .navbarBrand {
   margin-left: 0!important;
   padding: 0;
   @extend .vCenter;
   height: 29px;
   left: 0;
+  display: none;
 }
 .toggleButton{
   @extend .vCenter;
@@ -98,6 +103,7 @@ $hamburger-background: lighten($blue, 10%)!important;
   height: $height;
   padding: 0;
   position: relative;
+  display: none;
   li{
     height: $height;
     position: relative;
@@ -171,6 +177,9 @@ $hamburger-background: lighten($blue, 10%)!important;
   .navbarNav {
     margin-right: 10px!important;
   }
+  .navbarNavAnchor {
+    padding-right: 65px!important;
+  }
   .navbarBrand {
     left: 15px;
   }
@@ -179,6 +188,9 @@ $hamburger-background: lighten($blue, 10%)!important;
   }
 }
 @media#{$isPhone}{
+  .bigBrandContainer{
+    display: none;
+  }
   .navbarBrand{
     left: 15px;
   }
