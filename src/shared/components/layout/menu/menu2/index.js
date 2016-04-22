@@ -6,7 +6,7 @@ import SVG from '../../../svg';
 const style = require('./style.scss');
 
 
-export default class MainMenu extends React.Component {
+export default class Menu2 extends React.Component {
 
   getItems(data) {
     return data.map((item, index) => {
@@ -70,7 +70,7 @@ export default class MainMenu extends React.Component {
   }
 }
 
-MainMenu.propTypes = {
+Menu2.propTypes = {
   items: React.PropTypes.array.isRequired,
   icons: React.PropTypes.array,
   location: React.PropTypes.any,
