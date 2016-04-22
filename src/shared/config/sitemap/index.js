@@ -40,15 +40,6 @@ export default {
   icons: [{
     title: 'facebook',
     url: 'https://www.facebook.com/',
-  }, {
-    title: 'twitter',
-    url: 'https://www.twitter.com/',
-  }, {
-    title: 'pinterest',
-    url: 'https://www.pinterest.com/',
-  }, {
-    title: 'instagram',
-    url: 'https://www.instagram.com/',
   }],
   addresses: [{
     title: 'Tijuana',
