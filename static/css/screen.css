@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);.style__fCenter___cfX-h {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);.style__fCenter___cfX-h {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -380,3 +380,139 @@
 @media only screen and (max-width: 767px) {
   .style__title___2u_GP {
     font-size: 25px; } }
+.style__fCenter___1j0pv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+.style__vCenter___2KQFQ {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.style__vCenterRel___34eYy {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.style__hCenter___1Lkdf {
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.style__inheritHeight___1q40G {
+  height: inherit; }
+
+.style__hideOverflow___DrxCZ {
+  overflow: hidden; }
+
+.style__icon-sprites___3tV9U {
+  background-image: url("/images/sprites/sprite-sprites.png"); }
+
+#style__slider_home___1RJ2u {
+  border: 10px solid #ff0;
+  text-align: center; }
+
+.style__slider1___19swa, .style__slide1___2Q9-i, .style__slide2___3L5LN, .style__clinica-banner___15ESs, .style__equipo-banner___2uEY9, .style__servicios-banner___33PRg {
+  background-size: cover;
+  background-position: center top;
+  height: 500px; }
+  .style__slider1___19swa h2, .style__slide1___2Q9-i h2, .style__slide2___3L5LN h2, .style__clinica-banner___15ESs h2, .style__equipo-banner___2uEY9 h2, .style__servicios-banner___33PRg h2 {
+    margin-top: 0; }
+
+.style__slide1___2Q9-i {
+  background-image: url("/images/home/banner/slider_01.png"); }
+
+.style__heightFix___r0ajR {
+  height: 500px; }
+
+.style__slide2___3L5LN {
+  background-image: url("/images/home/banner/slider_02.png"); }
+
+.style__title___SyWrl {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 42px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 12px; }
+
+.style__btn1___Qnd-C {
+  width: 150px;
+  display: block;
+  margin: 0 auto; }
+
+.style__clinica-banner___15ESs {
+  background-image: url("/images/la-clinica/banner.png"); }
+
+.style__equipo-banner___2uEY9 {
+  background-image: url("/images/equipo/banner.png"); }
+
+.style__servicios-banner___33PRg {
+  background-image: url("/images/equipo/banner.png"); }
+
+@media only screen and (max-width: 767px) {
+  .style__title___SyWrl {
+    font-size: 25px; } }
+.style__fCenter___zkvoI {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+.style__vCenter___1amrF {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.style__vCenterRel___dRIh_ {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.style__hCenter___3ATdP {
+  position: absolute;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.style__inheritHeight___35WI7 {
+  height: inherit; }
+
+.style__hideOverflow___1PqV_ {
+  overflow: hidden; }
+
+.style__icon-sprites___1wvNu {
+  background-image: url("/images/sprites/sprite-sprites.png"); }
