@@ -1,5 +1,5 @@
 {
-  "name": "website-boilerplate",
+  "name": "website-notable",
   "version": "0.0.1",
   "description": "Mint website child",
   "main": "dist/server.js",
