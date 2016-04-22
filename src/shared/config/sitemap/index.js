@@ -1,6 +1,7 @@
 import AppHandler from '../../components/AppHandler';
 import HomeSection from '../../components/sections/home';
 import AboutSection from '../../components/sections/about';
+import ProductsSection from '../../components/sections/products';
 import ServicesSection from '../../components/sections/services';
 import ContactSection from '../../components/sections/contact';
 
@@ -21,11 +22,16 @@ export default {
       component: AboutSection,
     }, {
       id: 3,
+      title: 'Productos',
+      url: '/productos',
+      component: ProductsSection,
+    }, {
+      id: 4,
       title: 'Servicios',
       url: '/servicios',
       component: ServicesSection,
     }, {
-      id: 4,
+      id: 5,
       title: 'Contacto',
       url: '/contacto',
       component: ContactSection,
