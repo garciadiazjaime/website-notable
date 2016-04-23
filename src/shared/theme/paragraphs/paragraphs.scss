@@ -1,0 +1,9 @@
+@import '../constants';
+.paragraph1{
+  font-size: 25px;
+  font-family: $fontA;
+  color: $darkGray;
+  font-weight: 300;
+  margin-bottom: 100px;
+  text-align: center;
+}
