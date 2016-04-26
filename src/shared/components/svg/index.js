@@ -34,6 +34,11 @@ export default class SVG extends React.Component {
               <path d="M10.7 0v12L0 5.3v13.7l1.4 0.9v-2.3l0 0V7.8l9.3 5.9v0l3.9 2.5v10.4 0l0 1.7 1.4 0.9v-12.1l10.7 6.8v-13.8L10.7 0zM25.4 21.3l-9.3-5.9 -3.9-2.5V2.5l13.2 8.3V21.3z" fill="#c59f67"/>
             </svg>);
           break;
+        case 'double_arrow_down':
+          return (<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 14.6 19.9">
+            <polygon points="7.3 8.7 0 1.4 1.4 0 7.3 5.9 13.2 0 14.6 1.4 " fill="#FFF"/>
+            <polygon points="7.3 19.9 0 12.6 1.4 11.2 7.3 17.1 13.2 11.2 14.6 12.6 " fill="#FFF"/></svg>);
+          break;
       default:
         return (<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" className={className}>
           <circle cx="15" cy="15" r="15"/>
