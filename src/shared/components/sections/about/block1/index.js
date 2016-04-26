@@ -22,7 +22,7 @@ export default class Block1 extends React.Component {
             <h2 className={style.title3}>{titles.title1}</h2>
             <p className={style.paragraph3} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
             <Link to="/inicio">
-              <SVG network="double_arrow_down" className={style.brand}/>
+              <SVG network="double_arrow_down" className={style.svg}/>
             </Link>
 
           </div>
