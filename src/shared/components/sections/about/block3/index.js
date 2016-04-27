@@ -13,8 +13,8 @@ export default class Block3 extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-xs-12 col-sm-8 col-sm-offset-2">
-            <h2 className={style.title2}>{titles.title1}</h2>
-  <p className={style.paragraph1} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
+            <h2 className={style.title5}>{titles.title1}</h2>
+  <p className={style.paragraph4} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
           </div>
         </div>
       </div>

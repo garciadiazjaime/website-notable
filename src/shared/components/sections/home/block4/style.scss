@@ -1,5 +1,8 @@
-@import '../../../../theme/constants.scss';
-@import '../../../../theme/images/images';
 @import '../../../../theme/wrappers/wrappers';
-@import '../../../../theme/paragraphs/paragraphs';
+@import '../../../../theme/titles/titles';
 @import '../../../../theme/buttons/buttons';
+@import '../../../../theme/constants.scss';
+.mainTitle{
+  @extend .title3;
+  margin-top: 375px;
+}
