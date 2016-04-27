@@ -6,3 +6,4 @@ dist/server.js
 static/js
 static/images
 static/css
+.ruby-version
