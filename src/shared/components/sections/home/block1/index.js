@@ -3,6 +3,7 @@ import React from 'react';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import Carousel from '../../../elements/carousel';
+import SVG from '../../../svg';
 
 const style = require('./style.scss');
 
@@ -13,15 +14,17 @@ export default class Block1 extends React.Component {
     if (_.isArray(data) && data.length) {
       return data.map((item, index) => {
         const className = index === 0 ? 'active' : '';
-        const imgUrl = item.image; // && item.image.length ? item.image.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
-        return (<div className={'item ' + className + ' ' + (style.item || '')} key={index}>
-            <img src={imgUrl} alt={item.title} />
+        const divStyle = {
+          backgroundImage: 'url(/images/img_banner_s1.jpg)',
+        };
+        return (<div className={'item ' + className + ' ' + (style.item || '')} key={index} style={divStyle}>
             <div className="container-fluid">
               <div className="row">
                 <div className={'col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10px col-md-10-offset-1 ' + style.heightFix}>
                   <div className={style.vCenter}>
-                    <h1 className={style.title}>{item.title}</h1>
-                    <Link to={item.button_url} title={item.button_title} className={style.btn1}>
+                    <SVG network="brand" className={style.logo}/>
+                    <h1 className={style.mainTitle}>{item.title}</h1>
+                    <Link to={item.button_url} title={item.button_title} className={style.button2}>
                       {item.button_title}
                     </Link>
                   </div>

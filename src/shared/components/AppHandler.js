@@ -3,8 +3,8 @@ import React from 'react';
 import _ from 'lodash';
 
 import sitemap from '../config/sitemap';
-import MainMenu from './layout/menu/menu1';
-import Footer from './layout/footer/footer1';
+import MainMenu from './layout/menu/menu2';
+import Footer from './layout/footer/footer2';
 import scrollUtil from '../utils/scroll';
 import menuUtil from '../utils/menu';
 import restClient from '../../server/helpers/rest-client';
@@ -16,6 +16,7 @@ export default class AppHandler extends React.Component {
     super(props, context);
     this.state = {
       data: context.data && context.data.blocks ? context.data.blocks : window._data.blocks,
+      cache: {},
     };
   }
 
@@ -45,15 +46,19 @@ export default class AppHandler extends React.Component {
 
   onScroll() {
     const offset = window.pageYOffset;
-    if (offset > 186) {
+    if (offset > 386) {
       $('#menu_wrapper').addClass('navbar-fixed-top');
+      $('.navbar-brand').css('display', 'block');
+      $('.navbar-icons').css('display', 'block');
     } else {
       $('#menu_wrapper').removeClass('navbar-fixed-top');
+      $('.navbar-brand').css('display', 'none');
+      $('.navbar-icons').css('display', 'none');
     }
   }
 
   getBlocksData(data) {
-    const properties = ['slide_set', 'button_set', 'image_set', 'paragraph_set', 'title_set'];
+    const properties = ['slides', 'buttons', 'images', 'paragraphs', 'titles'];
     const response = {};
     if (_.isArray(data) && data.length) {
       data.map((item, index) => {
@@ -61,8 +66,7 @@ export default class AppHandler extends React.Component {
         response[key] = {};
         properties.map((prop) => {
           if (_.isArray(item[prop]) && item[prop].length) {
-            const newProp = prop.split('_')[0];
-            response[key][newProp + 's'] = newProp === 'slide' ? item[prop] : this.getDataLevelTwo(newProp, item[prop]);
+            response[key][prop] = prop === 'slides' ? item[prop] : this.getDataLevelTwo(prop, item[prop]);
           }
         });
       });
@@ -70,8 +74,9 @@ export default class AppHandler extends React.Component {
     return response;
   }
 
-  getDataLevelTwo(prop, data) {
+  getDataLevelTwo(props, data) {
     const response = {};
+    const prop = props.substring(0, props.length - 1);
     if (_.isArray(data) && data.length) {
       data.map((item, index) => {
         response[prop + (index + 1)] = item;
@@ -96,16 +101,23 @@ export default class AppHandler extends React.Component {
     const bits = window.location.pathname.split('/');
     const url = bits[1] || 'inicio';
     const sectionId = this.getSectionId(sitemap, url);
-    promises.push(restClient({
-      path: window._apiUrl + 'api/block/?section_id=' + sectionId,
-    }));
+    if (_.isEmpty(this.state.cache[sectionId])) {
+      promises.push(restClient({
+        path: window._apiUrl + 'api/block/?section_id=' + sectionId,
+      }));
 
-    if (promises.length) {
-      Promise.all(promises).then((data) => {
-        const blocks = this.getBlocksData(data[0].entity);
-        this.setState({
-          data: blocks,
+      if (promises.length) {
+        Promise.all(promises).then((data) => {
+          const blocks = this.getBlocksData(data[0].entity);
+          const state = this.state;
+          state.data = blocks;
+          state.cache[sectionId] = blocks;
+          this.setState(state);
         });
+      }
+    } else {
+      this.setState({
+        data: this.state.cache[sectionId],
       });
     }
   }

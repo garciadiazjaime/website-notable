@@ -25,10 +25,10 @@ var config = convict({
     env: 'SENDGRID_API_KEY'
   },
   apiUrl: {
-    doc: 'Portfolio API URL',
+    doc: 'API URL',
     format: String,
     default: '',
-    env: 'API_PORTFOLIO'
+    env: 'API_URL'
   },
 });
 
