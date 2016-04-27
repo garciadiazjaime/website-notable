@@ -1,5 +1,5 @@
 body{
-  font-family: 'opensans_regular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a:hover {
@@ -10,6 +10,10 @@ a:hover {
 
 .container-fluid{
 	max-width: 1024px;
+}
+
+img{
+  max-width: 100%;
 }
 
 #app{

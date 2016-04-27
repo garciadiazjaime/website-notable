@@ -82,7 +82,7 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _restClient = __webpack_require__(27);
+	var _restClient = __webpack_require__(25);
 
 	var _restClient2 = _interopRequireDefault(_restClient);
 
@@ -574,23 +574,23 @@
 
 	var _AppHandler2 = _interopRequireDefault(_AppHandler);
 
-	var _home = __webpack_require__(31);
+	var _home = __webpack_require__(29);
 
 	var _home2 = _interopRequireDefault(_home);
 
-	var _about = __webpack_require__(39);
+	var _about = __webpack_require__(40);
 
 	var _about2 = _interopRequireDefault(_about);
 
-	var _products = __webpack_require__(43);
+	var _products = __webpack_require__(49);
 
 	var _products2 = _interopRequireDefault(_products);
 
-	var _services = __webpack_require__(49);
+	var _services = __webpack_require__(55);
 
 	var _services2 = _interopRequireDefault(_services);
 
-	var _contact = __webpack_require__(51);
+	var _contact = __webpack_require__(57);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
@@ -630,15 +630,6 @@
 	  icons: [{
 	    title: 'facebook',
 	    url: 'https://www.facebook.com/'
-	  }, {
-	    title: 'twitter',
-	    url: 'https://www.twitter.com/'
-	  }, {
-	    title: 'pinterest',
-	    url: 'https://www.pinterest.com/'
-	  }, {
-	    title: 'instagram',
-	    url: 'https://www.instagram.com/'
 	  }],
 	  addresses: [{
 	    title: 'Tijuana',
@@ -687,15 +678,15 @@
 
 	var _footer2 = _interopRequireDefault(_footer);
 
-	var _scroll = __webpack_require__(25);
+	var _scroll = __webpack_require__(23);
 
 	var _scroll2 = _interopRequireDefault(_scroll);
 
-	var _menu3 = __webpack_require__(26);
+	var _menu3 = __webpack_require__(24);
 
 	var _menu4 = _interopRequireDefault(_menu3);
 
-	var _restClient = __webpack_require__(27);
+	var _restClient = __webpack_require__(25);
 
 	var _restClient2 = _interopRequireDefault(_restClient);
 
@@ -755,10 +746,14 @@
 	    key: 'onScroll',
 	    value: function onScroll() {
 	      var offset = window.pageYOffset;
-	      if (offset > 186) {
+	      if (offset > 386) {
 	        $('#menu_wrapper').addClass('navbar-fixed-top');
+	        $('.navbar-brand').css('display', 'block');
+	        $('.navbar-icons').css('display', 'block');
 	      } else {
 	        $('#menu_wrapper').removeClass('navbar-fixed-top');
+	        $('.navbar-brand').css('display', 'none');
+	        $('.navbar-icons').css('display', 'none');
 	      }
 	    }
 	  }, {
@@ -931,16 +926,16 @@
 
 	var style = __webpack_require__(19);
 
-	var MainMenu = function (_React$Component) {
-	  _inherits(MainMenu, _React$Component);
+	var Menu2 = function (_React$Component) {
+	  _inherits(Menu2, _React$Component);
 
-	  function MainMenu() {
-	    _classCallCheck(this, MainMenu);
+	  function Menu2() {
+	    _classCallCheck(this, Menu2);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(MainMenu).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Menu2).apply(this, arguments));
 	  }
 
-	  _createClass(MainMenu, [{
+	  _createClass(Menu2, [{
 	    key: 'getItems',
 	    value: function getItems(data) {
 	      var _this2 = this;
@@ -987,8 +982,13 @@
 	        'div',
 	        { className: style.navbarWrapper },
 	        _react2.default.createElement(
+	          'div',
+	          { className: style.bigBrandContainer },
+	          _react2.default.createElement('div', { className: style.bigBrand })
+	        ),
+	        _react2.default.createElement(
 	          'nav',
-	          { className: style.navbarDefault + ' navbar navbar navbar-fixed-top', id: 'menu_wrapper' },
+	          { className: style.navbarDefault + ' navbar ', id: 'menu_wrapper' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'container-fluid' },
@@ -1010,14 +1010,18 @@
 	                  _react2.default.createElement('span', { className: 'icon-bar ' + style.iconBar }),
 	                  _react2.default.createElement('span', { className: 'icon-bar ' + style.iconBar })
 	                ),
-	                _react2.default.createElement(_reactRouter.Link, { className: style.navbarBrand + ' navbar-brand', to: '/inicio' })
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: style.navbarBrand + ' navbar-brand', to: '/inicio' },
+	                  _react2.default.createElement(_svg2.default, { network: 'brand', className: style.brand })
+	                )
 	              ),
 	              _react2.default.createElement(
 	                'div',
 	                { className: style.navbarCollapse + ' collapse navbar-collapse', id: 'mainmenu' },
 	                _react2.default.createElement(
 	                  'ul',
-	                  { className: style.navbarIcons },
+	                  { className: style.navbarIcons + ' navbar-icons' },
 	                  this.getIcons(this.props.icons)
 	                ),
 	                _react2.default.createElement(
@@ -1034,13 +1038,13 @@
 	    }
 	  }]);
 
-	  return MainMenu;
+	  return Menu2;
 	}(_react2.default.Component);
 
-	exports.default = MainMenu;
+	exports.default = Menu2;
 
 
-	MainMenu.propTypes = {
+	Menu2.propTypes = {
 	  items: _react2.default.PropTypes.array.isRequired,
 	  icons: _react2.default.PropTypes.array,
 	  location: _react2.default.PropTypes.any,
@@ -1118,6 +1122,64 @@
 	            _react2.default.createElement('path', { d: 'M20.6 7H9.4c-1.3 0-2.4 0.9-2.4 2.1v11.8c0 1.2 1.1 2.1 2.4 2.1h11.3c1.3 0 2.4-0.9 2.4-2.1V9.1C23 7.9 22 7 20.6 7zM18.6 9.2c0-0.3 0.2-0.5 0.5-0.5h1.7c0.3 0 0.5 0.2 0.5 0.5v1.7c0 0.3-0.2 0.5-0.5 0.5h-1.7c-0.3 0-0.5-0.2-0.5-0.5V9.2zM17.7 11.7v0c0 0 0 0 0 0H17.7zM14.9 12c2 0 3.5 1.6 3.5 3.5 0 2-1.6 3.5-3.5 3.5 -2 0-3.5-1.6-3.5-3.5C11.4 13.6 13 12 14.9 12zM22 20.7c0 0.8-0.6 1.4-1.4 1.4H9.3c-0.8 0-1.4-0.6-1.4-1.4V13.3h2.9c-0.3 0.7-0.5 1.4-0.5 2.2 0 2.6 2.1 4.7 4.7 4.7 2.6 0 4.7-2.1 4.7-4.7 0-0.7-0.2-1.4-0.5-2h2.8V20.7z' })
 	          );
 	          break;
+	        case 'brand':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '27', height: '29', viewBox: '0 0 26.8 29.1', className: className },
+	            _react2.default.createElement('path', { d: 'M10.7 0v12L0 5.3v13.7l1.4 0.9v-2.3l0 0V7.8l9.3 5.9v0l3.9 2.5v10.4 0l0 1.7 1.4 0.9v-12.1l10.7 6.8v-13.8L10.7 0zM25.4 21.3l-9.3-5.9 -3.9-2.5V2.5l13.2 8.3V21.3z', fill: '#c59f67' })
+	          );
+	          break;
+	        case 'double_arrow_down':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '15', height: '20', viewBox: '0 0 14.6 19.9', className: className },
+	            _react2.default.createElement('polygon', { points: '7.3 8.7 0 1.4 1.4 0 7.3 5.9 13.2 0 14.6 1.4 ', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '7.3 19.9 0 12.6 1.4 11.2 7.3 17.1 13.2 11.2 14.6 12.6 ', fill: '#FFF' })
+	          );
+	          break;
+	        case 'circled_brand':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '94', height: '94', viewBox: '0 0 94.5 94.5', className: className },
+	            _react2.default.createElement('circle', { cx: '47.2', cy: '47.2', r: '47.2', fill: '#CBA764' }),
+	            _react2.default.createElement('path', { d: 'M44 27.7v15.7l-14-8.8v17.9l1.8 1.1v-2.9l0 0V37.9l12.1 7.6v0l5.1 3.2V62.3v-0.1l0 2.2 1.8 1.1V49.9l14 8.8V40.8L44 27.7zM63 55.4l-12.1-7.7L45.8 44.5V31l17.2 10.8V55.4z', fill: '#FFF' })
+	          );
+	          break;
+	        case 'circled_diseno':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '125', height: '122', viewBox: '0 0 125 121.8', className: className },
+	            _react2.default.createElement('circle', { cx: '63', cy: '59.7', r: '59.3', fill: '#CBA764' }),
+	            _react2.default.createElement('path', { d: 'M50 69.9c-2.3-2.9-3.5-6.4-3.5-10.2 0-9.1 7.4-16.5 16.5-16.5 9.1 0 16.5 7.4 16.5 16.5 0 3.6-1.2 7.1-3.3 10l-2-1.5c1.9-2.4 2.8-5.4 2.8-8.4 0-7.7-6.3-14-14-14 -7.7 0-14 6.3-14 14 0 3.2 1 6.1 3 8.6L50 69.9z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M50.6 82c-8.1-4.5-13.1-13.1-13.1-22.3 0-10.3 6.1-19.5 15.6-23.5l1 2.3c-8.5 3.6-14.1 11.9-14.1 21.2 0 8.3 4.5 16.1 11.8 20.1L50.6 82z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M63 85.2v-2.5c12.7 0 23-10.3 23-23s-10.3-23-23-23v-2.5c14.1 0 25.5 11.5 25.5 25.5C88.5 73.8 77.1 85.2 63 85.2z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M63 94.6c-8.9 0-17.3-3.3-23.8-9.4 -6.8-6.4-10.7-15-11-24.3 -0.6-19.2 14.5-35.4 33.8-36l0.1 2.5c-17.9 0.6-31.9 15.6-31.3 33.4 0.3 8.6 3.9 16.7 10.2 22.6 6.3 5.9 14.5 9 23.2 8.7 17.9-0.6 31.9-15.6 31.3-33.4l2.5-0.1c0.6 19.2-14.5 35.4-33.8 36C63.7 94.6 63.3 94.6 63 94.6z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M94.3 51.3C91.1 39.5 81.3 30.3 69.3 27.9l0.5-2.5c12.9 2.6 23.5 12.5 26.9 25.2L94.3 51.3z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M63 67.5c-4.3 0-7.8-3.5-7.8-7.8 0-4.3 3.5-7.8 7.8-7.8 4.3 0 7.8 3.5 7.8 7.8C70.8 64 67.3 67.5 63 67.5zM63 54.4c-2.9 0-5.3 2.4-5.3 5.3 0 2.9 2.4 5.3 5.3 5.3 2.9 0 5.3-2.4 5.3-5.3C68.3 56.8 65.9 54.4 63 54.4z', fill: '#fff' }),
+	            _react2.default.createElement('path', { d: 'M63 76.2c-3.6 0-6.9-1.1-9.8-3.2l1.5-2c2.6 1.9 5.6 2.8 8.8 2.7 2.8-0.1 5.5-1 7.7-2.6l1.5 2c-2.7 1.9-5.8 3-9.1 3.1C63.3 76.2 63.2 76.2 63 76.2z', fill: '#fff' })
+	          );
+	          break;
+	        case 'circled_coordinacion':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '125', height: '122', viewBox: '0 0 125 121.8', className: className },
+	            _react2.default.createElement('circle', { cx: '62.5', cy: '60.9', r: '59.3', fill: '#CBA764' }),
+	            _react2.default.createElement('path', { d: 'M62.5 68.2c-1.9 0-3.8-0.8-5.2-2.1 -2.8-2.8-2.8-7.5 0-10.3 1.4-1.4 3.2-2.1 5.2-2.1 1.9 0 3.8 0.8 5.2 2.1 2.8 2.8 2.8 7.5 0 10.3C66.3 67.5 64.4 68.2 62.5 68.2zM62.5 56.1c-1.3 0-2.5 0.5-3.4 1.4 -1.9 1.9-1.9 4.9 0 6.8 0.9 0.9 2.1 1.4 3.4 1.4 1.3 0 2.5-0.5 3.4-1.4 1.9-1.9 1.9-4.9 0-6.8C65 56.6 63.8 56.1 62.5 56.1z', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '83.9 48.5 82.1 50.3 91.6 59.7 76 59.7 76 62.2 91.5 62.2 82.1 71.7 83.9 73.4 96.3 61 ', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '74.9 39.6 62.5 27.1 50 39.6 51.8 41.3 61.2 31.9 61.2 47.4 63.7 47.4 63.7 31.9 73.2 41.3 ', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '49 59.6 33.5 59.6 42.9 50.2 41.1 48.4 28.7 60.9 41.1 73.3 42.9 71.6 33.4 62.1 49 62.1 ', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '73.3 80.5 63.8 90 63.8 74.4 61.3 74.4 61.3 90 51.8 80.5 50.1 82.3 62.5 94.8 75 82.3 ', fill: '#FFF' })
+	          );
+	          break;
+	        case 'circled_calidad':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '125', height: '122', viewBox: '0 0 125 121.8', className: className },
+	            _react2.default.createElement('circle', { cx: '62.5', cy: '61.1', r: '59.3', fill: '#CBA764' }),
+	            _react2.default.createElement('polygon', { points: '80.5 88.5 62.5 75.4 44.5 88.5 51.4 67.3 33.3 54.2 55.6 54.2 62.5 33 68.3 50.9 65.9 51.7 62.5 41.1 57.4 56.7 41 56.7 54.3 66.3 49.2 81.9 62.5 72.3 75.8 81.9 70.7 66.3 84 56.7 75.1 56.7 75.1 54.2 91.7 54.2 73.6 67.3 ', fill: '#FFF' }),
+	            _react2.default.createElement('polygon', { points: '61.8 68 55.9 60.9 57.8 59.3 61.8 64 83.3 37.3 85.2 38.9 ', fill: '#FFF' })
+	          );
+	          break;
 	        default:
 	          return _react2.default.createElement(
 	            'svg',
@@ -1152,7 +1214,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___cfX-h","vCenter":"style__vCenter___ZA14l","navbarBrand":"style__navbarBrand___2rqc0","toggleButton":"style__toggleButton___3q8M1","navbarNavAnchor":"style__navbarNavAnchor___37QYF","vCenterRel":"style__vCenterRel___1GkYt","navbarIcons":"style__navbarIcons___jZlWo","sm_icon":"style__sm_icon___3hlQn","hCenter":"style__hCenter___2Rj-i","inheritHeight":"style__inheritHeight___2LMcf","hideOverflow":"style__hideOverflow___3olA9","icon-sprites":"style__icon-sprites___1xY5y","navbarWrapper":"style__navbarWrapper___VqN0H","navbarDefault":"style__navbarDefault___aolZK","navbarHeader":"style__navbarHeader___2FrdS","iconBar":"style__iconBar___1hD4n","navbarCollapse":"style__navbarCollapse___3blFh","navbarNav":"style__navbarNav___1r3v1","facebook":"style__facebook___5X5oX","twitter":"style__twitter___2J781","pinterest":"style__pinterest___1p5Ft","instagram":"style__instagram___32QmM"};
+	module.exports = {"fCenter":"style__fCenter___s1Kc_","vCenter":"style__vCenter___NLv4F","navbarBrand":"style__navbarBrand___3C-2k","toggleButton":"style__toggleButton___1HDH1","navbarNavAnchor":"style__navbarNavAnchor___YxE1v","vCenterRel":"style__vCenterRel___2BQ_N","navbarIcons":"style__navbarIcons___dr1qz","sm_icon":"style__sm_icon___37x48","hCenter":"style__hCenter___6iKW4","inheritHeight":"style__inheritHeight___1_s2X","hideOverflow":"style__hideOverflow___3HuD4","icon-sprites":"style__icon-sprites___22kKN","bigBrand":"style__bigBrand___267I6","navbarWrapper":"style__navbarWrapper___1G7jv","navbarDefault":"style__navbarDefault___7oD7-","navbarHeader":"style__navbarHeader___R2f3i","bigBrandContainer":"style__bigBrandContainer___3YNSF","hidden":"style__hidden___AEeZP","iconBar":"style__iconBar___rWyNh","navbarCollapse":"style__navbarCollapse___2MKlE","navbarNav":"style__navbarNav___hhE6c","facebook":"style__facebook___1y0L5","twitter":"style__twitter___2iWZj","pinterest":"style__pinterest___V-LDI","instagram":"style__instagram___1Nnhj"};
 
 /***/ },
 /* 20 */
@@ -1175,14 +1237,6 @@
 	var _powered = __webpack_require__(21);
 
 	var _powered2 = _interopRequireDefault(_powered);
-
-	var _simplecontact = __webpack_require__(23);
-
-	var _simplecontact2 = _interopRequireDefault(_simplecontact);
-
-	var _simplesitemap = __webpack_require__(24);
-
-	var _simplesitemap2 = _interopRequireDefault(_simplesitemap);
 
 	var _svg = __webpack_require__(18);
 
@@ -1213,7 +1267,7 @@
 	      return data.map(function (item, index) {
 	        return _react2.default.createElement(
 	          'div',
-	          { key: index, className: 'col-xs-6 col-md-3' },
+	          { key: index, className: 'col-xs-12' },
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: item.url, className: style.sm_icon, id: item.url, target: '_blank' },
@@ -1236,26 +1290,26 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-xs-12 col-md-2' },
-	              _react2.default.createElement(_simplesitemap2.default, { data: this.props.items })
+	              { className: 'col-xs-12' },
+	              _react2.default.createElement('div', { className: style.footerBrand })
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-xs-12 col-sm-6' },
-	              _react2.default.createElement(_simplecontact2.default, null)
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-xs-12 col-sm-4' },
+	              { className: 'col-xs-12' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'row' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Todos los derechos reservados © Notable'
+	                ),
 	                this.getIcons(this.props.icons)
 	              )
-	            )
+	            ),
+	            _react2.default.createElement(_powered2.default, null)
 	          )
-	        ),
-	        _react2.default.createElement(_powered2.default, null)
+	        )
 	      );
 	    }
 	  }]);
@@ -1322,35 +1376,18 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: style.powered },
+	        { className: 'col-xs-12 ' + style.powered },
+	        'Un proyecto de: ',
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container-fluid' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-xs-12 col-sm-6' },
-	              'Todos los derechos reservados © Lasermedica'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-xs-12 col-sm-6' },
-	              'Un proyecto de: ',
-	              _react2.default.createElement(
-	                'a',
-	                { href: data[0].url, title: data[0].title, target: '_blank' },
-	                data[0].name
-	              ),
-	              '   Código por: ',
-	              _react2.default.createElement(
-	                'a',
-	                { href: data[1].url, title: data[1].title, target: '_blank' },
-	                data[1].name
-	              )
-	            )
-	          )
+	          'a',
+	          { href: data[0].url, title: data[0].title, target: '_blank' },
+	          data[0].name
+	        ),
+	        '   Código por: ',
+	        _react2.default.createElement(
+	          'a',
+	          { href: data[1].url, title: data[1].title, target: '_blank' },
+	          data[1].name
 	        )
 	      );
 	    }
@@ -1366,161 +1403,10 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___24X-f","vCenter":"style__vCenter___rkH6k","vCenterRel":"style__vCenterRel___W_SE5","hCenter":"style__hCenter___rq5W3","inheritHeight":"style__inheritHeight___IbmOF","hideOverflow":"style__hideOverflow___3nmjb","icon-sprites":"style__icon-sprites___2GHz5","footerWrapper":"style__footerWrapper___zbtoF","container":"style__container___2PqEc","sitemap":"style__sitemap___2b9Al","facebook":"style__facebook___39dVV","twitter":"style__twitter___1oyfA","pinterest":"style__pinterest___2_EXF","instagram":"style__instagram___1nFr4","contact_info":"style__contact_info___31Ajw","powered":"style__powered___2okxk","serviceTitle":"style__serviceTitle___22DP1"};
+	module.exports = {"fCenter":"style__fCenter___1OtUJ","vCenter":"style__vCenter___ZfiQP","vCenterRel":"style__vCenterRel___2Z0U4","hCenter":"style__hCenter___NPfjE","inheritHeight":"style__inheritHeight___-BJ7q","hideOverflow":"style__hideOverflow___3CKMi","icon-sprites":"style__icon-sprites___jkq7k","footerBrand":"style__footerBrand___3AS3G","footerWrapper":"style__footerWrapper___rztFx","container":"style__container___yXdw3","sitemap":"style__sitemap___3tSun","facebook":"style__facebook___3O8Ag","twitter":"style__twitter___2vpeo","pinterest":"style__pinterest___1Sa-N","instagram":"style__instagram___3C0VL","contact_info":"style__contact_info___vZfBA","powered":"style__powered___2_Lfa","serviceTitle":"style__serviceTitle___2GOw5"};
 
 /***/ },
 /* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(4);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var style = __webpack_require__(22);
-
-	var SimpleContact = function (_React$Component) {
-	  _inherits(SimpleContact, _React$Component);
-
-	  function SimpleContact() {
-	    _classCallCheck(this, SimpleContact);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(SimpleContact).apply(this, arguments));
-	  }
-
-	  _createClass(SimpleContact, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: style.contact_info },
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'contacto', title: 'Contáctanos' },
-	          'Contáctanos'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'mailto:info@mintitmedia.com', title: 'Contáctanos' },
-	          'info@mintitmedia.com'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'contacto', title: 'Contáctanos' },
-	          '(664)308-2240'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: 'https://www.google.com.mx/maps/@32.5019264,-116.9870849,17.44z?hl=en', title: 'Contáctanos' },
-	          'Calle Sacramento #4872, Col. El Paraíso, Tijuana B. C. México'
-	        )
-	      );
-	    }
-	  }]);
-
-	  return SimpleContact;
-	}(_react2.default.Component);
-
-	exports.default = SimpleContact;
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(4);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var style = __webpack_require__(22);
-
-	var SiteMap = function (_React$Component) {
-	  _inherits(SiteMap, _React$Component);
-
-	  function SiteMap() {
-	    _classCallCheck(this, SiteMap);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(SiteMap).apply(this, arguments));
-	  }
-
-	  _createClass(SiteMap, [{
-	    key: 'getItems',
-	    value: function getItems(data) {
-	      var _this2 = this;
-
-	      var items = data.map(function (item, index) {
-	        var children = item.children ? _this2.getItems(item.children) : null;
-
-	        return _react2.default.createElement(
-	          'li',
-	          { key: index },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: item.url },
-	            item.title
-	          ),
-	          children
-	        );
-	      }, this);
-	      return _react2.default.createElement(
-	        'ul',
-	        { className: style.sitemap },
-	        items
-	      );
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return this.getItems(this.props.data);
-	    }
-	  }]);
-
-	  return SiteMap;
-	}(_react2.default.Component);
-
-	exports.default = SiteMap;
-
-
-	SiteMap.propTypes = {
-	  data: _react2.default.PropTypes.array.isRequired
-	};
-
-/***/ },
-/* 25 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1563,7 +1449,7 @@
 	};
 
 /***/ },
-/* 26 */
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1578,7 +1464,7 @@
 	};
 
 /***/ },
-/* 27 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1587,15 +1473,15 @@
 	  value: true
 	});
 
-	var _rest = __webpack_require__(28);
+	var _rest = __webpack_require__(26);
 
 	var _rest2 = _interopRequireDefault(_rest);
 
-	var _mime = __webpack_require__(29);
+	var _mime = __webpack_require__(27);
 
 	var _mime2 = _interopRequireDefault(_mime);
 
-	var _errorCode = __webpack_require__(30);
+	var _errorCode = __webpack_require__(28);
 
 	var _errorCode2 = _interopRequireDefault(_errorCode);
 
@@ -1604,25 +1490,25 @@
 	exports.default = _rest2.default.wrap(_mime2.default, { mime: 'application/json' }).wrap(_errorCode2.default, { code: 300 });
 
 /***/ },
-/* 28 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = require("rest");
 
 /***/ },
-/* 29 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = require("rest/interceptor/mime");
 
 /***/ },
-/* 30 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = require("rest/interceptor/errorCode");
 
 /***/ },
-/* 31 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1641,15 +1527,15 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _block = __webpack_require__(32);
+	var _block = __webpack_require__(30);
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(35);
+	var _block3 = __webpack_require__(33);
 
 	var _block4 = _interopRequireDefault(_block3);
 
-	var _block5 = __webpack_require__(36);
+	var _block5 = __webpack_require__(35);
 
 	var _block6 = _interopRequireDefault(_block5);
 
@@ -1708,7 +1594,7 @@
 	};
 
 /***/ },
-/* 32 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1729,9 +1615,13 @@
 
 	var _reactRouter = __webpack_require__(4);
 
-	var _carousel = __webpack_require__(33);
+	var _carousel = __webpack_require__(31);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
+
+	var _svg = __webpack_require__(18);
+
+	var _svg2 = _interopRequireDefault(_svg);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1742,7 +1632,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
 
-	var style = __webpack_require__(34);
+	var style = __webpack_require__(32);
 
 	var Block1 = function (_React$Component) {
 	  _inherits(Block1, _React$Component);
@@ -1759,11 +1649,12 @@
 	      if (_lodash2.default.isArray(data) && data.length) {
 	        return data.map(function (item, index) {
 	          var className = index === 0 ? 'active' : '';
-	          var imgUrl = item.image; // && item.image.length ? item.image.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
+	          var divStyle = {
+	            backgroundImage: 'url(/images/img_banner_s1.jpg)'
+	          };
 	          return _react2.default.createElement(
 	            'div',
-	            { className: 'item ' + className + ' ' + (style.item || ''), key: index },
-	            _react2.default.createElement('img', { src: imgUrl, alt: item.title }),
+	            { className: 'item ' + className + ' ' + (style.item || ''), key: index, style: divStyle },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'container-fluid' },
@@ -1776,14 +1667,15 @@
 	                  _react2.default.createElement(
 	                    'div',
 	                    { className: style.vCenter },
+	                    _react2.default.createElement(_svg2.default, { network: 'brand', className: style.logo }),
 	                    _react2.default.createElement(
 	                      'h1',
-	                      { className: style.title },
+	                      { className: style.mainTitle },
 	                      item.title
 	                    ),
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
-	                      { to: item.button_url, title: item.button_title, className: style.btn1 },
+	                      { to: item.button_url, title: item.button_title, className: style.button2 },
 	                      item.button_title
 	                    )
 	                  )
@@ -1831,7 +1723,7 @@
 	};
 
 /***/ },
-/* 33 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1957,14 +1849,14 @@
 	};
 
 /***/ },
-/* 34 */
+/* 32 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","slider_home":"style__slider_home___Cmu-R","slider1":"style__slider1___1-rFc","slide1":"style__slide1___ItyN6","slide2":"style__slide2___33bBO","clinica-banner":"style__clinica-banner___3_ftA","equipo-banner":"style__equipo-banner___1OBZ0","servicios-banner":"style__servicios-banner___30duI","heightFix":"style__heightFix___25O8x","title":"style__title___2u_GP","btn1":"style__btn1___U_BXw"};
+	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","sideSwipe":"style__sideSwipe___1_Jvs","button1":"style__button1___3teya","button2":"style__button2___3emCl","title1":"style__title1___1fgRn","title2":"style__title2___3VQJ-","title4":"style__title4___GbpGB","title5":"style__title5___21deO","title3":"style__title3___15G1J","mainTitle":"style__mainTitle___2YLHB","title7":"style__title7___1Pacu","item":"style__item___1hdp3","logo":"style__logo___2ohm4","slider_home":"style__slider_home___Cmu-R","slider1":"style__slider1___1-rFc","slide1":"style__slide1___ItyN6","slide2":"style__slide2___33bBO","clinica-banner":"style__clinica-banner___3_ftA","equipo-banner":"style__equipo-banner___1OBZ0","servicios-banner":"style__servicios-banner___30duI","heightFix":"style__heightFix___25O8x","title":"style__title___2u_GP","btn1":"style__btn1___U_BXw"};
 
 /***/ },
-/* 35 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1993,7 +1885,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// const style = require('./style.scss');
+	var style = __webpack_require__(34);
 
 	var Block2 = function (_React$Component) {
 	  _inherits(Block2, _React$Component);
@@ -2020,19 +1912,19 @@
 	          { className: 'container-fluid' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'row ' + style.wrapper1 },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-sm-4 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title1 },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('img', { src: images.image1.src, alt: images.image1.alt }),
+	              _react2.default.createElement('img', { className: style.image1, src: '/images/img_living.png', alt: images.image1.alt }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button1.href },
+	                { className: style.button1, to: buttons.button1.href },
 	                buttons.button1.title
 	              )
 	            ),
@@ -2041,13 +1933,13 @@
 	              { className: 'col-sm-4 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title1 },
 	                titles.title2
 	              ),
-	              _react2.default.createElement('img', { src: images.image2.src, alt: images.image2.alt }),
+	              _react2.default.createElement('img', { className: style.image1, src: '/images/img_dining.png', alt: images.image2.alt }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button2.href },
+	                { className: style.button1, to: buttons.button2.href },
 	                buttons.button2.title
 	              )
 	            ),
@@ -2056,13 +1948,13 @@
 	              { className: 'col-sm-4 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title1 },
 	                titles.title3
 	              ),
-	              _react2.default.createElement('img', { src: images.image3.src, alt: images.image3.alt }),
+	              _react2.default.createElement('img', { className: style.image1, src: '/images/img_bed.png', alt: images.image3.alt }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button3.href },
+	                { className: style.button1, to: buttons.button3.href },
 	                buttons.button3.title
 	              )
 	            )
@@ -2083,7 +1975,14 @@
 	};
 
 /***/ },
-/* 36 */
+/* 34 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___ByilZ","vCenter":"style__vCenter___1v0oL","vCenterRel":"style__vCenterRel___r367-","hCenter":"style__hCenter___35AKo","inheritHeight":"style__inheritHeight___GkUeM","hideOverflow":"style__hideOverflow___30PJL","icon-sprites":"style__icon-sprites___1crXd","title1":"style__title1___3Lp7y","title2":"style__title2___1Nebh","title4":"style__title4___90ELg","title5":"style__title5___3p9GA","title3":"style__title3___2cBjs","title7":"style__title7___1hdkz","wrapper1":"style__wrapper1___vNX14","wrapper2":"style__wrapper2___lRsTj","sideSwipe":"style__sideSwipe___2tbA2","button1":"style__button1___3Mc_g","button2":"style__button2___2zikt","image1":"style__image1___4P84q"};
+
+/***/ },
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2102,7 +2001,7 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2114,7 +2013,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// const style = require('./style.scss');
+	var style = __webpack_require__(37);
 
 	var Block3 = function (_React$Component) {
 	  _inherits(Block3, _React$Component);
@@ -2143,13 +2042,13 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-12 col-xs-12' },
+	              { className: 'col-xs-12 col-sm-8 col-sm-offset-2' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title2 },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
+	              _react2.default.createElement('p', { className: style.paragraph1, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
 	            )
 	          )
 	        )
@@ -2168,7 +2067,7 @@
 	};
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2182,6 +2081,13 @@
 	    __html: data
 	  };
 	};
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___1UpIU","vCenter":"style__vCenter___1YV9g","vCenterRel":"style__vCenterRel___1D8tj","hCenter":"style__hCenter___2TvfM","inheritHeight":"style__inheritHeight___3jids","hideOverflow":"style__hideOverflow___16pkQ","icon-sprites":"style__icon-sprites___3x6uL","title1":"style__title1___3QBup","title2":"style__title2___19ma5","title4":"style__title4___1kzHe","title5":"style__title5___w6HV2","title3":"style__title3___17GG-","title7":"style__title7___3kWyz","paragraph1":"style__paragraph1___mOtQ_","paragraph2":"style__paragraph2___34cYP","paragraph3":"style__paragraph3___pE0dO","paragraph4":"style__paragraph4___2Bqj7"};
 
 /***/ },
 /* 38 */
@@ -2213,7 +2119,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// const style = require('./style.scss');
+	var style = __webpack_require__(39);
 
 	var Block4 = function (_React$Component) {
 	  _inherits(Block4, _React$Component);
@@ -2229,12 +2135,14 @@
 	    value: function render() {
 	      var _props$data = this.props.data;
 	      var titles = _props$data.titles;
-	      var images = _props$data.images;
 	      var buttons = _props$data.buttons;
 
+	      var divStyle = {
+	        backgroundImage: 'url(/images/img_showroom.jpg)'
+	      };
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: style.wrapper2, style: divStyle },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container-fluid' },
@@ -2246,13 +2154,12 @@
 	              { className: 'col-sm-6 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.mainTitle },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('img', { src: images.image1.src, alt: images.image1.alt }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button1.href },
+	                { className: style.button2, to: buttons.button1.href },
 	                buttons.button1.title
 	              )
 	            )
@@ -2274,6 +2181,13 @@
 
 /***/ },
 /* 39 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___2Xb8X","vCenter":"style__vCenter___hmun0","vCenterRel":"style__vCenterRel___2lPVo","hCenter":"style__hCenter___1JZnn","inheritHeight":"style__inheritHeight___1rILl","hideOverflow":"style__hideOverflow___1Q2PJ","icon-sprites":"style__icon-sprites___38gIr","wrapper1":"style__wrapper1___3ANK2","wrapper2":"style__wrapper2___2RaJ7","title1":"style__title1___25IAx","title2":"style__title2___wfjef","title4":"style__title4____YoIR","title5":"style__title5___T2PV8","title3":"style__title3___EBeus","mainTitle":"style__mainTitle___1Zhib","title7":"style__title7___18HEf","sideSwipe":"style__sideSwipe___2Dk6P","button1":"style__button1___1hNj-","button2":"style__button2___1PxHI"};
+
+/***/ },
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2292,19 +2206,19 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _block = __webpack_require__(40);
+	var _block = __webpack_require__(41);
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(41);
+	var _block3 = __webpack_require__(43);
 
 	var _block4 = _interopRequireDefault(_block3);
 
-	var _block5 = __webpack_require__(36);
+	var _block5 = __webpack_require__(45);
 
 	var _block6 = _interopRequireDefault(_block5);
 
-	var _block7 = __webpack_require__(42);
+	var _block7 = __webpack_require__(47);
 
 	var _block8 = _interopRequireDefault(_block7);
 
@@ -2357,7 +2271,7 @@
 	};
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2376,7 +2290,13 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _reactRouter = __webpack_require__(4);
+
+	var _svg = __webpack_require__(18);
+
+	var _svg2 = _interopRequireDefault(_svg);
+
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2386,9 +2306,10 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
-	// const style = require('./style.scss');
+
+	var style = __webpack_require__(42);
 
 	var Block1 = function (_React$Component) {
 	  _inherits(Block1, _React$Component);
@@ -2402,14 +2323,16 @@
 	  _createClass(Block1, [{
 	    key: 'render',
 	    value: function render() {
+	      var divStyle = {
+	        backgroundImage: 'url(/images/nosotros_banner.jpg)'
+	      };
 	      var _props$data = this.props.data;
 	      var titles = _props$data.titles;
-	      var images = _props$data.images;
 	      var paragraphs = _props$data.paragraphs;
 
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
-	        null,
+	        { style: divStyle, className: style.mainbanner },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container-fluid' },
@@ -2418,14 +2341,18 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-6 col-xs-12' },
+	              { className: 'col-xs-12 col-sm-6 col-sm-offset-3' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title3 },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('img', { src: images.image1.src, alt: images.image1.alt }),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
+	              _react2.default.createElement('p', { className: style.paragraph3, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/inicio' },
+	                _react2.default.createElement(_svg2.default, { network: 'double_arrow_down', className: style.svg })
+	              )
 	            )
 	          )
 	        )
@@ -2444,7 +2371,14 @@
 	};
 
 /***/ },
-/* 41 */
+/* 42 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___31Hcb","vCenter":"style__vCenter___1vIHp","vCenterRel":"style__vCenterRel___370S2","hCenter":"style__hCenter___35qeO","inheritHeight":"style__inheritHeight___1sRB4","hideOverflow":"style__hideOverflow___3Yokh","icon-sprites":"style__icon-sprites___1i1iv","sideSwipe":"style__sideSwipe___3OFJQ","button1":"style__button1___knh5C","button2":"style__button2___3rlK3","title1":"style__title1___1LlDm","title2":"style__title2___3ep2l","title4":"style__title4___1U9Z2","title5":"style__title5___1Vr2v","title3":"style__title3___1URy1","title7":"style__title7___3y_yN","paragraph1":"style__paragraph1___8Df9P","paragraph2":"style__paragraph2___KQkCk","paragraph3":"style__paragraph3___2Y3uZ","paragraph4":"style__paragraph4___2iSO1","mainbanner":"style__mainbanner___3hjPv","svg":"style__svg___29LI3"};
+
+/***/ },
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2465,7 +2399,11 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _svg = __webpack_require__(18);
+
+	var _svg2 = _interopRequireDefault(_svg);
+
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2475,9 +2413,10 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
-	// const style = require('./style.scss');
+
+	var style = __webpack_require__(44);
 
 	var Block2 = function (_React$Component) {
 	  _inherits(Block2, _React$Component);
@@ -2499,7 +2438,7 @@
 
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: style.commitment },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container-fluid' },
@@ -2508,23 +2447,24 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-6 col-xs-12' },
+	              { className: 'col-xs-12 col-sm-6' },
+	              _react2.default.createElement(_svg2.default, { network: 'circled_brand', className: style.svg }),
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title7 },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
+	              _react2.default.createElement('p', { className: style.paragraph2, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button1.href },
+	                { className: style.button1, to: buttons.button1.href },
 	                buttons.button1.title
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-6 col-xs-12' },
-	              _react2.default.createElement('img', { src: images.image1.src, alt: images.image1.alt })
+	              { className: 'col-xs-12 col-sm-6' },
+	              _react2.default.createElement('img', { src: '/images/nosotros_b2_fox.jpg', alt: images.image1.alt })
 	            )
 	          )
 	        )
@@ -2543,7 +2483,14 @@
 	};
 
 /***/ },
-/* 42 */
+/* 44 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___xP6Z-","vCenter":"style__vCenter___3EDwH","vCenterRel":"style__vCenterRel___1d1I_","hCenter":"style__hCenter___3LKuT","inheritHeight":"style__inheritHeight___11OVE","hideOverflow":"style__hideOverflow___1koJ0","icon-sprites":"style__icon-sprites___2uiLf","wrapper1":"style__wrapper1___3L2d2","wrapper2":"style__wrapper2___2PtFa","sideSwipe":"style__sideSwipe___19HIU","button1":"style__button1___ma4vA","button2":"style__button2___1Fwzx","title1":"style__title1___2c1PC","title2":"style__title2___U0Za7","title4":"style__title4___c-0OO","title5":"style__title5___XOjHY","title3":"style__title3___qpZuD","title7":"style__title7___21JO_","image1":"style__image1___25W0l","paragraph1":"style__paragraph1___1m33N","paragraph2":"style__paragraph2___3OtNY","paragraph3":"style__paragraph3___3qs1J","paragraph4":"style__paragraph4___3oqJH","commitment":"style__commitment___2dWq9","svg":"style__svg___25w61"};
+
+/***/ },
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2562,7 +2509,7 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2574,7 +2521,104 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// const style = require('./style.scss');
+	var style = __webpack_require__(46);
+
+	var Block3 = function (_React$Component) {
+	  _inherits(Block3, _React$Component);
+
+	  function Block3() {
+	    _classCallCheck(this, Block3);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Block3).apply(this, arguments));
+	  }
+
+	  _createClass(Block3, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props$data = this.props.data;
+	      var titles = _props$data.titles;
+	      var paragraphs = _props$data.paragraphs;
+
+	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container-fluid' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-xs-12 col-sm-8 col-sm-offset-2' },
+	              _react2.default.createElement(
+	                'h2',
+	                { className: style.title5 },
+	                titles.title1
+	              ),
+	              _react2.default.createElement('p', { className: style.paragraph4, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
+	            )
+	          )
+	        )
+	      ) : null;
+	    }
+	  }]);
+
+	  return Block3;
+	}(_react2.default.Component);
+
+	exports.default = Block3;
+
+
+	Block3.propTypes = {
+	  data: _react2.default.PropTypes.object
+	};
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___1cV0K","vCenter":"style__vCenter___36W6o","vCenterRel":"style__vCenterRel___1YqGI","hCenter":"style__hCenter___3Rsy5","inheritHeight":"style__inheritHeight___2L2YW","hideOverflow":"style__hideOverflow___R7Nky","icon-sprites":"style__icon-sprites___1R2yV","title1":"style__title1___36WkF","title2":"style__title2___21MoW","title4":"style__title4___3vPE_","title5":"style__title5___1hZAj","title3":"style__title3___WdO4l","title7":"style__title7___3fXSj","paragraph1":"style__paragraph1___227GM","paragraph2":"style__paragraph2___1thX2","paragraph3":"style__paragraph3___2HqvV","paragraph4":"style__paragraph4___N1_Zr"};
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(6);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var _svg = __webpack_require__(18);
+
+	var _svg2 = _interopRequireDefault(_svg);
+
+	var _sanitize = __webpack_require__(36);
+
+	var _sanitize2 = _interopRequireDefault(_sanitize);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
+
+
+	var style = __webpack_require__(48);
 
 	var Block4 = function (_React$Component) {
 	  _inherits(Block4, _React$Component);
@@ -2606,39 +2650,42 @@
 	              { className: 'col-sm-12 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title5 },
 	                titles.title1
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-sm-4 col-xs-12' },
+	              _react2.default.createElement(_svg2.default, { network: 'circled_diseno', className: style.svg }),
 	              _react2.default.createElement(
 	                'h3',
-	                null,
+	                { className: style.title4 },
 	                titles.title2
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
+	              _react2.default.createElement('p', { className: style.paragraph2, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-sm-4 col-xs-12' },
+	              _react2.default.createElement(_svg2.default, { network: 'circled_coordinacion', className: style.svg }),
 	              _react2.default.createElement(
 	                'h3',
-	                null,
+	                { className: style.title4 },
 	                titles.title3
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph2) })
+	              _react2.default.createElement('p', { className: style.paragraph2, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph2) })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-sm-4 col-xs-12' },
+	              _react2.default.createElement(_svg2.default, { network: 'circled_calidad', className: style.svg }),
 	              _react2.default.createElement(
 	                'h3',
-	                null,
+	                { className: style.title4 },
 	                titles.title4
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph3) })
+	              _react2.default.createElement('p', { className: style.paragraph2, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph3) })
 	            )
 	          )
 	        )
@@ -2657,7 +2704,14 @@
 	};
 
 /***/ },
-/* 43 */
+/* 48 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___3P8Pp","vCenter":"style__vCenter___2Et1N","vCenterRel":"style__vCenterRel___3DCRz","hCenter":"style__hCenter___wKyoU","inheritHeight":"style__inheritHeight___1zL8U","hideOverflow":"style__hideOverflow___3ZV71","icon-sprites":"style__icon-sprites___8RQVq","image1":"style__image1___3KY44","wrapper1":"style__wrapper1___3SYJt","wrapper2":"style__wrapper2___Q9fKW","paragraph1":"style__paragraph1___3QbsS","paragraph2":"style__paragraph2___26NJ4","paragraph3":"style__paragraph3___3Uj57","paragraph4":"style__paragraph4___3ImpF","sideSwipe":"style__sideSwipe___13jwX","button1":"style__button1___1pbIc","button2":"style__button2___1FucC","title1":"style__title1___1w9oV","title2":"style__title2___2-ry2","title4":"style__title4___2yc3s","title5":"style__title5___TtpHn","title3":"style__title3___L0OLC","title7":"style__title7___1eGbP","svg":"style__svg___3Smom"};
+
+/***/ },
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2676,19 +2730,19 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _block = __webpack_require__(44);
+	var _block = __webpack_require__(50);
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(40);
+	var _block3 = __webpack_require__(41);
 
 	var _block4 = _interopRequireDefault(_block3);
 
-	var _block5 = __webpack_require__(46);
+	var _block5 = __webpack_require__(52);
 
 	var _block6 = _interopRequireDefault(_block5);
 
-	var _block7 = __webpack_require__(48);
+	var _block7 = __webpack_require__(54);
 
 	var _block8 = _interopRequireDefault(_block7);
 
@@ -2718,6 +2772,8 @@
 	      var block2 = _props$data.block2;
 	      var block3 = _props$data.block3;
 	      var block4 = _props$data.block4;
+	      var block5 = _props$data.block5;
+	      var block6 = _props$data.block6;
 
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
@@ -2725,9 +2781,9 @@
 	        _react2.default.createElement(_block2.default, { data: block1 }),
 	        _react2.default.createElement(_block4.default, { data: block2 }),
 	        _react2.default.createElement(_block6.default, { data: block3, sliderId: 'main-carousel-livingroom' }),
-	        _react2.default.createElement(_block6.default, { data: block3, sliderId: 'main-carousel-dining' }),
-	        _react2.default.createElement(_block6.default, { data: block3, sliderId: 'main-carousel-bedroom' }),
-	        _react2.default.createElement(_block8.default, { data: block4 })
+	        _react2.default.createElement(_block6.default, { data: block4, sliderId: 'main-carousel-dining' }),
+	        _react2.default.createElement(_block6.default, { data: block5, sliderId: 'main-carousel-bedroom' }),
+	        _react2.default.createElement(_block8.default, { data: block6 })
 	      ) : null;
 	    }
 	  }]);
@@ -2743,7 +2799,7 @@
 	};
 
 /***/ },
-/* 44 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2764,11 +2820,11 @@
 
 	var _reactRouter = __webpack_require__(4);
 
-	var _carousel = __webpack_require__(33);
+	var _carousel = __webpack_require__(31);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2781,7 +2837,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
 
-	var style = __webpack_require__(45);
+	var style = __webpack_require__(51);
 
 	var Block1 = function (_React$Component) {
 	  _inherits(Block1, _React$Component);
@@ -2842,11 +2898,16 @@
 	            null,
 	            titles.title1
 	          ),
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            titles.title2
+	          ),
 	          _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: buttons.href, title: buttons.title, className: style.btn1 },
-	            buttons.title
+	            { to: buttons.button1.href, title: buttons.button1.title, className: style.btn1 },
+	            buttons.button1.title
 	          )
 	        )
 	      ) : null;
@@ -2864,14 +2925,14 @@
 	};
 
 /***/ },
-/* 45 */
+/* 51 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","slider_home":"style__slider_home___1RJ2u","slider1":"style__slider1___19swa","slide1":"style__slide1___2Q9-i","slide2":"style__slide2___3L5LN","clinica-banner":"style__clinica-banner___15ESs","equipo-banner":"style__equipo-banner___2uEY9","servicios-banner":"style__servicios-banner___33PRg","heightFix":"style__heightFix___r0ajR","title":"style__title___SyWrl","btn1":"style__btn1___Qnd-C"};
+	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","sideSwipe":"style__sideSwipe___1FVlo","button1":"style__button1___3ZmPV","button2":"style__button2___2shnn","slider_home":"style__slider_home___1RJ2u","slider1":"style__slider1___19swa","slide1":"style__slide1___2Q9-i","slide2":"style__slide2___3L5LN","clinica-banner":"style__clinica-banner___15ESs","equipo-banner":"style__equipo-banner___2uEY9","servicios-banner":"style__servicios-banner___33PRg","heightFix":"style__heightFix___r0ajR","title":"style__title___SyWrl","btn1":"style__btn1___Qnd-C"};
 
 /***/ },
-/* 46 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2892,11 +2953,11 @@
 
 	var _reactRouter = __webpack_require__(4);
 
-	var _carousel = __webpack_require__(33);
+	var _carousel = __webpack_require__(31);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -2909,7 +2970,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
 
-	var style = __webpack_require__(47);
+	var style = __webpack_require__(53);
 
 	var Block3 = function (_React$Component) {
 	  _inherits(Block3, _React$Component);
@@ -3012,14 +3073,14 @@
 	};
 
 /***/ },
-/* 47 */
+/* 53 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___zkvoI","vCenter":"style__vCenter___1amrF","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu"};
+	module.exports = {"fCenter":"style__fCenter___zkvoI","vCenter":"style__vCenter___1amrF","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu","image1":"style__image1___1XYmO","wrapper1":"style__wrapper1___3o2Nd","wrapper2":"style__wrapper2___25OyJ","paragraph1":"style__paragraph1___GDSgG","paragraph2":"style__paragraph2___YHIz0","paragraph3":"style__paragraph3___3TUGd","paragraph4":"style__paragraph4___36NX-","sideSwipe":"style__sideSwipe___10nak","button1":"style__button1___1wRom","button2":"style__button2___2IfG_"};
 
 /***/ },
-/* 48 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3040,7 +3101,7 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -3118,7 +3179,7 @@
 	};
 
 /***/ },
-/* 49 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3137,15 +3198,15 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _block = __webpack_require__(40);
+	var _block = __webpack_require__(41);
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(41);
+	var _block3 = __webpack_require__(43);
 
 	var _block4 = _interopRequireDefault(_block3);
 
-	var _block5 = __webpack_require__(50);
+	var _block5 = __webpack_require__(56);
 
 	var _block6 = _interopRequireDefault(_block5);
 
@@ -3195,7 +3256,7 @@
 	};
 
 /***/ },
-/* 50 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3214,7 +3275,7 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
@@ -3319,7 +3380,7 @@
 	};
 
 /***/ },
-/* 51 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3338,11 +3399,11 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _block = __webpack_require__(52);
+	var _block = __webpack_require__(58);
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(53);
+	var _block3 = __webpack_require__(59);
 
 	var _block4 = _interopRequireDefault(_block3);
 
@@ -3390,7 +3451,7 @@
 	};
 
 /***/ },
-/* 52 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3461,7 +3522,7 @@
 	};
 
 /***/ },
-/* 53 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3482,11 +3543,11 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _sanitize = __webpack_require__(37);
+	var _sanitize = __webpack_require__(36);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
-	var _form = __webpack_require__(54);
+	var _form = __webpack_require__(60);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -3571,7 +3632,7 @@
 	};
 
 /***/ },
-/* 54 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3590,7 +3651,7 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _restClient = __webpack_require__(27);
+	var _restClient = __webpack_require__(25);
 
 	var _restClient2 = _interopRequireDefault(_restClient);
 
@@ -3602,7 +3663,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 600, 4] */
 
-	var style = __webpack_require__(55);
+	var style = __webpack_require__(61);
 
 	var Form1 = function (_React$Component) {
 	  _inherits(Form1, _React$Component);
@@ -3859,7 +3920,7 @@
 	exports.default = Form1;
 
 /***/ },
-/* 55 */
+/* 61 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
