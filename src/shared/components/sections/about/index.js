@@ -13,7 +13,7 @@ export default class AboutSection extends React.Component {
   render() {
     const { block1, block2, block3, block4 } = this.props.data;
     return !_.isEmpty(this.props.data) ? (<div>
-      <Block1 data={block1} />
+      <Block1 data={block1} classes={'col-xs-12 col-sm-6 col-sm-offset-3'} />
       <Block2 data={block2} />
       <Block3 data={block3} />
       <Block4 data={block4} />

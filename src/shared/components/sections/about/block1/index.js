@@ -18,7 +18,7 @@ export default class Block1 extends React.Component {
     return !_.isEmpty(this.props.data) ? (<div style={divStyle} className={style.mainbanner}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-12 col-sm-6 col-sm-offset-3">
+          <div className={this.props.classes}>
             <h2 className={style.title3}>{titles.title1}</h2>
             <p className={style.paragraph3} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
             <Link to="/inicio">
@@ -34,4 +34,5 @@ export default class Block1 extends React.Component {
 
 Block1.propTypes = {
   data: React.PropTypes.object,
+  classes: React.PropTypes.string,
 };

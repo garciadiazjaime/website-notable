@@ -14,10 +14,8 @@ export default class Block1 extends React.Component {
     if (_.isArray(data) && data.length) {
       return data.map((item, index) => {
         const className = index === 0 ? 'active' : '';
-        const imgUrl = item.image; // && item.image.length ? item.image.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
 
-        return (<div className={'item ' + className + ' ' + (style.item || '')} key={index}>
-            <img src={imgUrl} alt={item.title} />
+        return (<div className={'item ' + style.slide + ' ' + className + ' ' + (style.item || '')} key={index} style={{ backgroundImage: ' url("/images/nosotros_banner_s1_bed.png")' }}>
         </div>);
       });
     }
@@ -38,13 +36,21 @@ export default class Block1 extends React.Component {
       <Carousel id="main-carousel2" interval={8000} indicators={false} classes={carouselClasses}>
         {this.renderItems(slides)}
       </Carousel>
-      <div>
-        <h1>{titles.title1}</h1>
-        <h2>{titles.title2}</h2>
-        <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
-        <Link to={buttons.button1.href} title={buttons.button1.title} className={style.btn1}>
-          {buttons.button1.title}
-        </Link>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs-12 col-sm-5">
+            <div className={style.overbanner}>
+              <div className={style.vCenter}>
+                <h1 className={style.title}>{titles.title1}</h1>
+                <h2 className={style.subtitle}>{titles.title2}</h2>
+                <p className={style.paragraph}dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
+                <Link className={style.button} to={buttons.button1.href} title={buttons.button1.title}>
+                  {buttons.button1.title}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>) : null;
   }
