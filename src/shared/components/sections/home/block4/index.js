@@ -1,6 +1,9 @@
+/* eslint max-len: [2, 500, 4] */
+
 import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
+import setImageAsBackground from '../../../../utils/setImageAsBackground';
 
 const style = require('./style.scss');
 
@@ -8,10 +11,8 @@ const style = require('./style.scss');
 export default class Block4 extends React.Component {
 
   render() {
-    const { titles, buttons } = this.props.data;
-    const divStyle = {
-      backgroundImage: 'url(/images/img_showroom.jpg)',
-    };
+    const { titles, buttons, images } = this.props.data;
+    const divStyle = setImageAsBackground(images.image1);
     return !_.isEmpty(this.props.data) ? (<div className={style.wrapper2} style={divStyle}>
       <div className="container-fluid">
         <div className="row">
