@@ -74,6 +74,16 @@ export default class SVG extends React.Component {
             <polygon points="61.8 68 55.9 60.9 57.8 59.3 61.8 64 83.3 37.3 85.2 38.9 " fill="#FFF" />
           </svg>);
         break;
+      case 'carousel_left':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 7.9 14.1"  className={className}>
+          <polyline points="7.4 0.5 0.8 7.1 7.5 13.7 " fill="none" stroke="#CBA764" strokeWidth="2"/>
+        </svg>);
+        break;
+      case 'carousel_right':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 7.9 14.1"  className={className}>
+          <polyline points="0.9 13.7 7.5 7.1 0.8 0.5 " fill="none" stroke="#CBA764" strokeWidth="2"/>
+        </svg>);
+        break;
       default:
         return (<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" className={className}>
           <circle cx="15" cy="15" r="15"/>
