@@ -1,3 +1,5 @@
+/* eslint max-len: [2, 500, 4] */
+
 import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';

@@ -18,14 +18,15 @@ export default class Block2 extends React.Component {
           <div className="col-sm-6 col-xs-12">
             <h2>{titles.title1}</h2>
             <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
-            <Link to={buttons.button1.href}>{buttons.button1.title}</Link>
             <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph2)} />
+            <Link to={buttons.button1.href}>{buttons.button1.title}</Link>
             <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph3)} />
             <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph4)} />
+            <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph5)} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <h2>{titles.title1}</h2>
-            <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph5)} />
+            <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph6)} />
             <Form />
           </div>
         </div>
