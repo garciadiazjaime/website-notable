@@ -3,8 +3,8 @@ import React from 'react';
 import _ from 'lodash';
 
 import sitemap from '../config/sitemap';
-import MainMenu from './layout/menu/menu1';
-import Footer from './layout/footer/footer1';
+import MainMenu from './layout/menu/menu2';
+import Footer from './layout/footer/footer2';
 import scrollUtil from '../utils/scroll';
 import menuUtil from '../utils/menu';
 import restClient from '../../server/helpers/rest-client';
@@ -46,10 +46,14 @@ export default class AppHandler extends React.Component {
 
   onScroll() {
     const offset = window.pageYOffset;
-    if (offset > 186) {
+    if (offset > 386) {
       $('#menu_wrapper').addClass('navbar-fixed-top');
+      $('.navbar-brand').css('display', 'block');
+      $('.navbar-icons').css('display', 'block');
     } else {
       $('#menu_wrapper').removeClass('navbar-fixed-top');
+      $('.navbar-brand').css('display', 'none');
+      $('.navbar-icons').css('display', 'none');
     }
   }
 

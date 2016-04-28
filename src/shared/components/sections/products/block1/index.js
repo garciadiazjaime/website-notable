@@ -40,9 +40,10 @@ export default class Block1 extends React.Component {
       </Carousel>
       <div>
         <h1>{titles.title1}</h1>
+        <h2>{titles.title2}</h2>
         <p dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
-        <Link to={buttons.href} title={buttons.title} className={style.btn1}>
-          {buttons.title}
+        <Link to={buttons.button1.href} title={buttons.button1.title} className={style.btn1}>
+          {buttons.button1.title}
         </Link>
       </div>
     </div>) : null;

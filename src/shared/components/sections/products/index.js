@@ -11,14 +11,14 @@ import Block4 from './block4';
 export default class ProductsSection extends React.Component {
 
   render() {
-    const { block1, block2, block3, block4 } = this.props.data;
+    const { block1, block2, block3, block4, block5, block6 } = this.props.data;
     return !_.isEmpty(this.props.data) ? (<div>
       <Block1 data={block1} />
       <Block2 data={block2} />
       <Block3 data={block3} sliderId="main-carousel-livingroom" />
-      <Block3 data={block3} sliderId="main-carousel-dining" />
-      <Block3 data={block3} sliderId="main-carousel-bedroom" />
-      <Block4 data={block4} />
+      <Block3 data={block4} sliderId="main-carousel-dining" />
+      <Block3 data={block5} sliderId="main-carousel-bedroom" />
+      <Block4 data={block6} />
     </div>) : null;
   }
 }
