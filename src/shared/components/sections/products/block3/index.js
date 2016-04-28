@@ -19,7 +19,7 @@ export default class Block3 extends React.Component {
           <div className="container-fluid">
             <div className="row">
               <div className={'col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10px col-md-10-offset-1 ' + style.heightFix}>
-                <div className={style.vCenter}>
+                <div>
                   <img src={imgUrl} alt={item.title} />
                   <h3 className={style.title}>{item.title}</h3>
                   <p dangerouslySetInnerHTML={sanitizeUtil(item.content)} />
@@ -49,7 +49,7 @@ export default class Block3 extends React.Component {
     };
     return _.isArray(slides) && slides.length && titles ? (<div>
       <div>
-        <h2>{titles.title1}</h2>
+        <h2 className={style.title}>{titles.title1}</h2>
       </div>
       <Carousel id={sliderId} interval={8000} indicators={false} classes={carouselClasses}>
         {this.renderItems(slides)}
