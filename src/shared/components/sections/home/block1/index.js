@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { Link } from 'react-router';
 import Carousel from '../../../elements/carousel';
 import SVG from '../../../svg';
+import setImageAsBackground from '../../../../utils/setImageAsBackground';
 
 const style = require('./style.scss');
 
@@ -14,9 +15,7 @@ export default class Block1 extends React.Component {
     if (_.isArray(data) && data.length) {
       return data.map((item, index) => {
         const className = index === 0 ? 'active' : '';
-        const divStyle = {
-          backgroundImage: 'url(/images/img_banner_s1.jpg)',
-        };
+        const divStyle = setImageAsBackground(item.image);
         return (<div className={'item ' + className + ' ' + (style.item || '')} key={index} style={divStyle}>
             <div className="container-fluid">
               <div className="row">

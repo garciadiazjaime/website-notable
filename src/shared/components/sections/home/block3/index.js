@@ -1,20 +1,22 @@
+/* eslint max-len: [2, 500, 4] */
+
 import React from 'react';
 import _ from 'lodash';
 
 import sanitizeUtil from '../../../../utils/sanitize';
-const style = require('./style.scss');
 
 
 export default class Block3 extends React.Component {
 
   render() {
-    const { titles, paragraphs } = this.props.data;
+    const { data, style } = this.props;
+    const { titles, paragraphs } = data;
     return !_.isEmpty(this.props.data) ? (<div>
       <div className="container-fluid">
         <div className="row">
           <div className="col-xs-12 col-sm-8 col-sm-offset-2">
-            <h2 className={style.title2}>{titles.title1}</h2>
-  <p className={style.paragraph1} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
+            <h2 className={style.title1}>{titles.title1}</h2>
+            <p className={style.paragraph1} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
           </div>
         </div>
       </div>
@@ -24,4 +26,5 @@ export default class Block3 extends React.Component {
 
 Block3.propTypes = {
   data: React.PropTypes.object,
+  style: React.PropTypes.object,
 };

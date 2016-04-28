@@ -20,7 +20,7 @@ export default class Block2 extends React.Component {
             <Link className={style.button1} to={buttons.button1.href}>{buttons.button1.title}</Link>
           </div>
           <div className="col-xs-12 col-sm-6">
-            <img src={'/images/nosotros_b2_fox.jpg'} alt={images.image1.alt} />
+            <img src={images.image1.src} alt={images.image1.alt} />
           </div>
         </div>
       </div>
