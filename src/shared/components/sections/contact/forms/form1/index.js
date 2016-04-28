@@ -164,7 +164,7 @@ export default class Form1 extends React.Component {
 
         <div className="form-group">
           <label id="lab_message" className="col-sm-10 control-label">
-            Procedimiento de Interés
+            Mensaje
           </label>
           <div className="col-sm-12 col-sm-offset-1">
             <input type="text" name="message" onChange={this.onChangeHandler} value={message.value} />
