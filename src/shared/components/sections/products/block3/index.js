@@ -3,7 +3,6 @@ import React from 'react';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import Carousel from '../../../elements/carousel';
-
 import sanitizeUtil from '../../../../utils/sanitize';
 const style = require('./style.scss');
 
@@ -14,7 +13,7 @@ export default class Block3 extends React.Component {
     if (_.isArray(data) && data.length) {
       return data.map((item, index) => {
         const className = index === 0 ? 'active' : '';
-        const imgUrl = item.image; // && item.image.length ? item.image.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
+        const imgUrl = item.image.length ? item.image.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
         return (<div className={'item ' + className + ' ' + (style.item || '')} key={index}>
           <div className="container-fluid">
             <div className="row">
