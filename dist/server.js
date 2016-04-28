@@ -110,8 +110,9 @@
 	  return 0;
 	}
 
-	function getDataLevelTwo(prop, data) {
+	function getDataLevelTwo(props, data) {
 	  var response = {};
+	  var prop = props.substring(0, props.length - 1);
 	  if (_lodash2.default.isArray(data) && data.length) {
 	    data.map(function (item, index) {
 	      response[prop + (index + 1)] = item;
@@ -121,7 +122,7 @@
 	}
 
 	function getBlocksData(data) {
-	  var properties = ['slide_set', 'button_set', 'image_set', 'paragraph_set', 'title_set'];
+	  var properties = ['slides', 'buttons', 'images', 'paragraphs', 'titles'];
 	  var response = {};
 	  if (_lodash2.default.isArray(data) && data.length) {
 	    data.map(function (item, index) {
@@ -129,8 +130,7 @@
 	      response[key] = {};
 	      properties.map(function (prop) {
 	        if (_lodash2.default.isArray(item[prop]) && item[prop].length) {
-	          var newProp = prop.split('_')[0];
-	          response[key][newProp + 's'] = newProp === 'slide' ? item[prop] : getDataLevelTwo(newProp, item[prop]);
+	          response[key][prop] = prop === 'slides' ? item[prop] : getDataLevelTwo(prop, item[prop]);
 	        }
 	      });
 	    });
@@ -1917,7 +1917,7 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
 	var style = __webpack_require__(35);
 
