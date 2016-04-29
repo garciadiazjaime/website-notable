@@ -32,6 +32,12 @@
 	@extend .button1;
 	margin-left: 0;
 }
-@media #{$isPhone}{
 
+// Carousel
+.controls{
+	background-image: none!important;
+	background: none;
+	opacity: 1;
+	height: 334px;
+	width: 118px;
 }

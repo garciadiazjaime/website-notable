@@ -31,6 +31,7 @@ export default class Block1 extends React.Component {
         base: style.controls,
         prev: style.prev,
         next: style.next,
+        arrow: style.arrow,
       },
     };
     return _.isArray(slides) && slides.length && titles ? (<div>
