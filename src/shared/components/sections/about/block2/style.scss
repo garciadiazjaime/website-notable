@@ -21,3 +21,6 @@
 .button1{
   margin-left: 0;
 }
+.image{
+  @extend .image1;  
+}

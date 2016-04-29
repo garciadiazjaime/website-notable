@@ -17,9 +17,14 @@ export default class AboutSection extends React.Component {
       title1: style.title5,
       paragraph1: style.paragraph4,
     };
+    const classes = {
+      svg: style.svg,
+      col1: 'col-xs-12 col-sm-6',
+      col2: 'col-xs-12 col-sm-6',
+    };
     return !_.isEmpty(this.props.data) ? (<div>
       <Block1 data={block1} classes={'col-xs-12 col-sm-6 col-sm-offset-3'} />
-      <Block2 data={block2} />
+      <Block2 data={block2} classes={classes}/>
       <Block3 data={block3} style={block3Styles} />
       <Block4 data={block4} />
     </div>) : null;

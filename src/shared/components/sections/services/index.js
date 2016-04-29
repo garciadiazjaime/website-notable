@@ -12,8 +12,10 @@ export default class ServicesSection extends React.Component {
   render() {
     const { block1, block2, block3 } = this.props.data;
     const classes = {
-      svg = style.svg;
-    }
+      svg: style.svg,
+      col1: 'col-xs-12 col-sm-5',
+      col2: 'col-xs-12 col-sm-7',
+    };
     return !_.isEmpty(this.props.data) ? (<div>
       <Block1 data={block1} />
       <Block2 data={block2} classes={classes}/>
