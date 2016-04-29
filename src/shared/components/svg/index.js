@@ -84,6 +84,56 @@ export default class SVG extends React.Component {
           <polyline points="0.9 13.7 7.5 7.1 0.8 0.5 " fill="none" stroke="#CBA764" strokeWidth="2"/>
         </svg>);
         break;
+      case 'servicios_entrevista':
+        return(<svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 118.6 118.6" className={className}>
+          <circle cx="59.3" cy="59.3" r="59.3" fill="#FFB69F"/>
+          <rect x="27" y="28.5" width="64.6" height="61.6" fill="none" strokeWidth="3" stroke="#fff"/>
+          <circle cx="38.4" cy="59.3" r="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+          <circle cx="80.2" cy="59.3" r="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+          <circle cx="59.3" cy="78.7" r="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+          <circle cx="59.3" cy="39.9" r="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        </svg>);
+        break;
+      case 'servicios_conceptualizacion':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 118.6 118.6" className={className}>
+          <circle cx="59.3" cy="59.3" r="59.3" fill="#FFB69F"/>
+          <rect x="28.5" y="28.1" width="61.6" height="62" fill="none" strokeWidth="3" stroke="#fff"/>
+          <rect x="56.3" y="70.1" width="25.8" height="10.9" fill="none" strokeWidth="3" stroke="#fff"/>
+          <rect x="35.8" y="36.1" width="11.4" height="26.7" fill="none" strokeWidth="3" stroke="#fff"/>
+          <rect x="35.8" y="70.1" width="11.4" height="10.9" fill="none" strokeWidth="3" stroke="#fff"/>
+          <rect x="56.3" y="36.1" width="25.8" height="26.7" fill="none" strokeWidth="3" stroke="#fff"/>
+          <line x1="82.1" y1="62.7" x2="56.3" y2="36.1" fill="none" strokeWidth="3" stroke="#fff"/>
+          <line x1="82.1" y1="51.2" x2="67.5" y2="36.1" fill="none" strokeWidth="3" stroke="#fff"/>
+          <line x1="71" y1="62.7" x2="56.3" y2="47.6" fill="none" strokeWidth="3" stroke="#fff"/>
+        </svg>);
+        break;
+      case 'servicios_proyecto':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 118.6 118.6" className={className}>
+        <circle cx="59.2" cy="59.3" r="59.3" fill="#FFB69F"/>
+        <polyline points="90.7 45.8 90.7 90.8 27.6 90.8 27.6 29.2 90.7 29.2 90.7 34.1 " fill="none" strokeWidth="3" stroke="#fff"/>
+        <polyline points="73.8 68.2 90.7 68.2 90.7 90.8 57.2 90.8 57.2 68.2 61 68.2 " fill="none" strokeWidth="3" stroke="#fff"/>
+        <polyline points="27.6 68.2 46.4 68.2 46.4 81.4 " fill="none" strokeWidth="3" stroke="#fff"/>
+        <line x1="90.7" y1="59.5" x2="56.1" y2="59.5" fill="none" strokeWidth="3" stroke="#fff"/>
+        <line x1="46.9" y1="28.8" x2="46.9" y2="59.1" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="54.8" y="37.5" width="27.8" height="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="64.8" y="73.8" width="17.8" height="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="33.3" y="73.8" width="7.9" height="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="33.3" y="37.5" width="7.9" height="11.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        </svg>);
+        break;
+      case 'servicios_ejecucion':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 118.6 118.6" className={className}>
+        <circle cx="59.3" cy="59.3" r="59.3" fill="#FFB69F"/>
+        <rect x="28.5" y="28.3" width="61.6" height="62" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="55.9" y="66.7" width="6.9" height="12.2" fill="none" strokeWidth="3" stroke="#fff"/>
+        <line x1="56.1" y1="78.9" x2="56.1" y2="83" fill="none" strokeWidth="3" stroke="#fff"/>
+        <line x1="76.8" y1="78.9" x2="76.8" y2="83" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="66.3" y="38.2" width="16" height="20.1" fill="none" strokeWidth="3" stroke="#fff"/>
+        <rect x="71.2" y="68.5" width="18.9" height="10.4" fill="none" strokeWidth="3" stroke="#fff"/>
+        <path d="M77.8 72.8c0.5 0 0.9 0.4 0.9 0.9s-0.4 0.9-0.9 0.9 -0.9-0.4-0.9-0.9S77.3 72.8 77.8 72.8M77.8 71.5c-1.2 0-2.2 1-2.2 2.2s1 2.2 2.2 2.2 2.2-1 2.2-2.2S79 71.5 77.8 71.5L77.8 71.5z" fill="#FFF"/>
+        <polyline points="56.1 78.9 28.5 78.9 28.5 70.9 55.7 70.9"  fill="none" strokeWidth="3" stroke="#fff"/>
+        <polyline points="56.1 70.9 28.5 70.9 28.5 58.3 59.3 58.3 59.3 66.7" fill="none" strokeWidth="3" stroke="#fff"/></svg>);
+        break;
       default:
         return (<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" className={className}>
           <circle cx="15" cy="15" r="15"/>
