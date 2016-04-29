@@ -14,7 +14,7 @@ export default class Block1 extends React.Component {
     const styles = this.props.style;
     const { titles, paragraphs, images } = this.props.data;
     const divStyle = setImageAsBackground(images.image1);
-    return !_.isEmpty(this.props.data) ? (<div style={divStyle} className={style.mainbanner + ' ' + styles.wrapper}>
+    return !_.isEmpty(this.props.data) ? (<div style={divStyle} className={style.mainbanner + ' ' + (styles ? styles.wrapper : '')}>
       <div className="container-fluid">
         <div className="row">
           <div className={this.props.classes}>
