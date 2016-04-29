@@ -2,6 +2,9 @@
 import React from 'react';
 import _ from 'lodash';
 
+import SVG from '../../svg';
+const style = require('./style.scss');
+
 export default class Carousel extends React.Component {
 
   getIndicators(data, flag) {
@@ -20,10 +23,12 @@ export default class Carousel extends React.Component {
     const { base, prev, next } = classes;
     if (flag !== false) {
       return (<div>
-          <a className={'left carousel-control ' + (base || '') + ' ' + (prev || '')} href={'#' + id} role="button" data-slide="prev">
+          <a className={'left carousel-control ' + (base || '') + ' ' + (prev || '') + ' ' + style.controls2} href={'#' + id} role="button" data-slide="prev">
+          <SVG network="carousel_left" className={style.svg2}/>
           <span className="sr-only">Previous</span>
         </a>
-        <a className={'right carousel-control ' + (base || '') + ' ' + (next || '')} href={'#' + id} role="button" data-slide="next">
+        <a className={'right carousel-control ' + (base || '') + ' ' + (next || '') + ' ' + style.controls2} href={'#' + id} role="button" data-slide="next">
+          <SVG network="carousel_right" className={style.svg2}/>
           <span className="sr-only">Next</span>
         </a>
       </div>);

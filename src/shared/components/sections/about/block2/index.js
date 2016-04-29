@@ -11,7 +11,7 @@ export default class Block2 extends React.Component {
   render() {
     const { titles, images, paragraphs, buttons } = this.props.data;
     return !_.isEmpty(this.props.data) ? (<div className={style.commitment}>
-      <div className="container-fluid">
+      <div className={'container-fluid ' + style.wrapper}>
         <div className="row">
           <div className="col-xs-12 col-sm-6">
             <SVG network="circled_brand" className={style.svg}/>
