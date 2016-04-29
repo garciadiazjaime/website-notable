@@ -33,3 +33,15 @@
   background-color: $gold;
   margin: 0 0 25px;
 }
+
+// Carousel
+.controls{
+	background-image: none!important;
+	background: #f7f7f7;
+	opacity: 1;
+	height: 334px;
+	width: 118px;
+}
+.arrow{
+	@extend .vCenter;
+}
