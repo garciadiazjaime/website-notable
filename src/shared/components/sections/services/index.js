@@ -5,6 +5,8 @@ import Block1 from '../about/block1';
 import Block2 from '../about/block2';
 import Block3 from './block3';
 
+// const style = require('./style.scss');
+
 export default class ServicesSection extends React.Component {
 
   render() {
