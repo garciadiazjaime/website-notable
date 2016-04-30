@@ -1253,6 +1253,14 @@
 	            _react2.default.createElement('polyline', { points: '56.1 70.9 28.5 70.9 28.5 58.3 59.3 58.3 59.3 66.7', fill: 'none', strokeWidth: '3', stroke: '#fff' })
 	          );
 	          break;
+	        case 'location':
+	          return _react2.default.createElement(
+	            'svg',
+	            { xmlns: 'http://www.w3.org/2000/svg', width: '18', height: '30', viewBox: '0 0 17.5 30', className: className },
+	            _react2.default.createElement('path', { d: 'M8.8 5.4c-1.8 0-3.3 1.5-3.3 3.3 0 1.8 1.5 3.3 3.3 3.3 1.8 0 3.3-1.5 3.3-3.3C12.1 6.9 10.6 5.4 8.8 5.4zM8.8 10.1c-0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4 0.8 0 1.4 0.6 1.4 1.4C10.1 9.5 9.5 10.1 8.8 10.1z', fill: '#CBA764' }),
+	            _react2.default.createElement('path', { d: 'M8.8 0C3.9 0 0 3.9 0 8.8c0 1.1 0.2 2.1 0.6 3.2L7.9 29.4C8 29.8 8.4 30 8.8 30c0 0 0 0 0 0 0.4 0 0.8-0.2 0.9-0.6l7.3-17.5c0.4-1 0.6-2.1 0.6-3.1C17.5 3.9 13.6 0 8.8 0zM15.1 11.3L8.8 26.5 2.5 11.5l-0.1-0.3C2.1 10.4 2 9.6 2 8.8c0-3.8 3.1-6.8 6.8-6.8 3.8 0 6.8 3.1 6.8 6.8C15.6 9.6 15.4 10.4 15.1 11.3z', fill: '#CBA764' })
+	          );
+	          break;
 	        default:
 	          return _react2.default.createElement(
 	            'svg',
@@ -1967,7 +1975,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","sideSwipe":"style__sideSwipe___1_Jvs","button1":"style__button1___3teya","button2":"style__button2___3emCl","title1":"style__title1___1fgRn","title2":"style__title2___3VQJ-","title4":"style__title4___GbpGB","title5":"style__title5___21deO","title6":"style__title6___2x7FO","title3":"style__title3___15G1J","mainTitle":"style__mainTitle___2YLHB","title7":"style__title7___1Pacu","title8":"style__title8___1BoeB","item":"style__item___1hdp3","logo":"style__logo___2ohm4","base":"style__base___3O-48","heightFix":"style__heightFix___25O8x","title":"style__title___2u_GP"};
+	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","sideSwipe":"style__sideSwipe___1_Jvs","button1":"style__button1___3teya","button2":"style__button2___3emCl","button3":"style__button3___1egvE","title1":"style__title1___1fgRn","title2":"style__title2___3VQJ-","title4":"style__title4___GbpGB","title5":"style__title5___21deO","title6":"style__title6___2x7FO","title3":"style__title3___15G1J","mainTitle":"style__mainTitle___2YLHB","title7":"style__title7___1Pacu","title8":"style__title8___1BoeB","item":"style__item___1hdp3","logo":"style__logo___2ohm4","base":"style__base___3O-48","heightFix":"style__heightFix___25O8x","title":"style__title___2u_GP"};
 
 /***/ },
 /* 34 */
@@ -2093,7 +2101,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___ByilZ","vCenter":"style__vCenter___1v0oL","vCenterRel":"style__vCenterRel___r367-","hCenter":"style__hCenter___35AKo","inheritHeight":"style__inheritHeight___GkUeM","hideOverflow":"style__hideOverflow___30PJL","icon-sprites":"style__icon-sprites___1crXd","title1":"style__title1___3Lp7y","title2":"style__title2___1Nebh","title4":"style__title4___90ELg","title5":"style__title5___3p9GA","title6":"style__title6___1cWpF","title3":"style__title3___2cBjs","title7":"style__title7___1hdkz","title8":"style__title8___4sMWt","wrapper1":"style__wrapper1___vNX14","wrapper2":"style__wrapper2___lRsTj","sideSwipe":"style__sideSwipe___2tbA2","button1":"style__button1___3Mc_g","button2":"style__button2___2zikt","image1":"style__image1___4P84q"};
+	module.exports = {"fCenter":"style__fCenter___ByilZ","vCenter":"style__vCenter___1v0oL","vCenterRel":"style__vCenterRel___r367-","hCenter":"style__hCenter___35AKo","inheritHeight":"style__inheritHeight___GkUeM","hideOverflow":"style__hideOverflow___30PJL","icon-sprites":"style__icon-sprites___1crXd","title1":"style__title1___3Lp7y","title2":"style__title2___1Nebh","title4":"style__title4___90ELg","title5":"style__title5___3p9GA","title6":"style__title6___1cWpF","title3":"style__title3___2cBjs","title7":"style__title7___1hdkz","title8":"style__title8___4sMWt","wrapper1":"style__wrapper1___vNX14","wrapper2":"style__wrapper2___lRsTj","sideSwipe":"style__sideSwipe___2tbA2","button1":"style__button1___3Mc_g","button2":"style__button2___2zikt","button3":"style__button3___3KWNZ","image1":"style__image1___4P84q"};
 
 /***/ },
 /* 36 */
@@ -2295,14 +2303,14 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___2Xb8X","vCenter":"style__vCenter___hmun0","vCenterRel":"style__vCenterRel___2lPVo","hCenter":"style__hCenter___1JZnn","inheritHeight":"style__inheritHeight___1rILl","hideOverflow":"style__hideOverflow___1Q2PJ","icon-sprites":"style__icon-sprites___38gIr","wrapper1":"style__wrapper1___3ANK2","wrapper2":"style__wrapper2___2RaJ7","title1":"style__title1___25IAx","title2":"style__title2___wfjef","title4":"style__title4____YoIR","title5":"style__title5___T2PV8","title6":"style__title6___G7Bi3","title3":"style__title3___EBeus","mainTitle":"style__mainTitle___1Zhib","title7":"style__title7___18HEf","title8":"style__title8___1HuLF","sideSwipe":"style__sideSwipe___2Dk6P","button1":"style__button1___1hNj-","button2":"style__button2___1PxHI"};
+	module.exports = {"fCenter":"style__fCenter___2Xb8X","vCenter":"style__vCenter___hmun0","vCenterRel":"style__vCenterRel___2lPVo","hCenter":"style__hCenter___1JZnn","inheritHeight":"style__inheritHeight___1rILl","hideOverflow":"style__hideOverflow___1Q2PJ","icon-sprites":"style__icon-sprites___38gIr","wrapper1":"style__wrapper1___3ANK2","wrapper2":"style__wrapper2___2RaJ7","title1":"style__title1___25IAx","title2":"style__title2___wfjef","title4":"style__title4____YoIR","title5":"style__title5___T2PV8","title6":"style__title6___G7Bi3","title3":"style__title3___EBeus","mainTitle":"style__mainTitle___1Zhib","title7":"style__title7___18HEf","title8":"style__title8___1HuLF","sideSwipe":"style__sideSwipe___2Dk6P","button1":"style__button1___1hNj-","button2":"style__button2___1PxHI","button3":"style__button3___1BqYh"};
 
 /***/ },
 /* 40 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___qougA","vCenter":"style__vCenter___2pche","vCenterRel":"style__vCenterRel___WRKiA","hCenter":"style__hCenter___GVDHq","inheritHeight":"style__inheritHeight___3vMr3","hideOverflow":"style__hideOverflow___DySF5","icon-sprites":"style__icon-sprites___3MPLL","title1":"style__title1___2nprc","title2":"style__title2___Ed3NC","title4":"style__title4___TWOKi","title5":"style__title5___3ggFp","title6":"style__title6___24Rd3","title3":"style__title3___3lNau","title7":"style__title7___12tON","title8":"style__title8___yHay2","paragraph1":"style__paragraph1___1TaFV","paragraph2":"style__paragraph2___2uqC0","paragraph3":"style__paragraph3___3gwex","paragraph4":"style__paragraph4___paMRe"};
+	module.exports = {"fCenter":"style__fCenter___qougA","vCenter":"style__vCenter___2pche","vCenterRel":"style__vCenterRel___WRKiA","hCenter":"style__hCenter___GVDHq","inheritHeight":"style__inheritHeight___3vMr3","hideOverflow":"style__hideOverflow___DySF5","icon-sprites":"style__icon-sprites___3MPLL","title1":"style__title1___2nprc","title2":"style__title2___Ed3NC","title4":"style__title4___TWOKi","title5":"style__title5___3ggFp","title6":"style__title6___24Rd3","title3":"style__title3___3lNau","title7":"style__title7___12tON","title8":"style__title8___yHay2","paragraph1":"style__paragraph1___1TaFV","paragraph2":"style__paragraph2___2uqC0","paragraph3":"style__paragraph3___3gwex","paragraph4":"style__paragraph4___paMRe","paragraph5":"style__paragraph5___1RMUm"};
 
 /***/ },
 /* 41 */
@@ -2510,7 +2518,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___31Hcb","vCenter":"style__vCenter___1vIHp","vCenterRel":"style__vCenterRel___370S2","hCenter":"style__hCenter___35qeO","inheritHeight":"style__inheritHeight___1sRB4","hideOverflow":"style__hideOverflow___3Yokh","icon-sprites":"style__icon-sprites___1i1iv","sideSwipe":"style__sideSwipe___3OFJQ","button1":"style__button1___knh5C","button2":"style__button2___3rlK3","title1":"style__title1___1LlDm","title2":"style__title2___3ep2l","title4":"style__title4___1U9Z2","title5":"style__title5___1Vr2v","title6":"style__title6___2K-qx","title3":"style__title3___1URy1","title7":"style__title7___3y_yN","title8":"style__title8___1urYo","paragraph1":"style__paragraph1___8Df9P","paragraph2":"style__paragraph2___KQkCk","paragraph3":"style__paragraph3___2Y3uZ","paragraph4":"style__paragraph4___2iSO1","mainbanner":"style__mainbanner___3hjPv","svg":"style__svg___29LI3"};
+	module.exports = {"fCenter":"style__fCenter___31Hcb","vCenter":"style__vCenter___1vIHp","vCenterRel":"style__vCenterRel___370S2","hCenter":"style__hCenter___35qeO","inheritHeight":"style__inheritHeight___1sRB4","hideOverflow":"style__hideOverflow___3Yokh","icon-sprites":"style__icon-sprites___1i1iv","sideSwipe":"style__sideSwipe___3OFJQ","button1":"style__button1___knh5C","button2":"style__button2___3rlK3","button3":"style__button3___2KaTC","title1":"style__title1___1LlDm","title2":"style__title2___3ep2l","title4":"style__title4___1U9Z2","title5":"style__title5___1Vr2v","title6":"style__title6___2K-qx","title3":"style__title3___1URy1","title7":"style__title7___3y_yN","title8":"style__title8___1urYo","paragraph1":"style__paragraph1___8Df9P","paragraph2":"style__paragraph2___KQkCk","paragraph3":"style__paragraph3___2Y3uZ","paragraph4":"style__paragraph4___2iSO1","paragraph5":"style__paragraph5___iOq2N","mainbanner":"style__mainbanner___3hjPv","svg":"style__svg___29LI3"};
 
 /***/ },
 /* 44 */
@@ -2624,7 +2632,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___xP6Z-","vCenter":"style__vCenter___3EDwH","vCenterRel":"style__vCenterRel___1d1I_","hCenter":"style__hCenter___3LKuT","inheritHeight":"style__inheritHeight___11OVE","hideOverflow":"style__hideOverflow___1koJ0","icon-sprites":"style__icon-sprites___2uiLf","wrapper1":"style__wrapper1___3L2d2","wrapper2":"style__wrapper2___2PtFa","sideSwipe":"style__sideSwipe___19HIU","button1":"style__button1___ma4vA","button2":"style__button2___1Fwzx","title1":"style__title1___2c1PC","title2":"style__title2___U0Za7","title4":"style__title4___c-0OO","title5":"style__title5___XOjHY","title6":"style__title6___2E_cG","title3":"style__title3___qpZuD","title7":"style__title7___21JO_","title8":"style__title8___36gBQ","image1":"style__image1___25W0l","image":"style__image___3H8hz","paragraph1":"style__paragraph1___1m33N","paragraph2":"style__paragraph2___3OtNY","paragraph3":"style__paragraph3___3qs1J","paragraph4":"style__paragraph4___3oqJH","commitment":"style__commitment___2dWq9","svg":"style__svg___25w61"};
+	module.exports = {"fCenter":"style__fCenter___xP6Z-","vCenter":"style__vCenter___3EDwH","vCenterRel":"style__vCenterRel___1d1I_","hCenter":"style__hCenter___3LKuT","inheritHeight":"style__inheritHeight___11OVE","hideOverflow":"style__hideOverflow___1koJ0","icon-sprites":"style__icon-sprites___2uiLf","wrapper1":"style__wrapper1___3L2d2","wrapper2":"style__wrapper2___2PtFa","sideSwipe":"style__sideSwipe___19HIU","button1":"style__button1___ma4vA","button2":"style__button2___1Fwzx","button3":"style__button3___3p2Pg","title1":"style__title1___2c1PC","title2":"style__title2___U0Za7","title4":"style__title4___c-0OO","title5":"style__title5___XOjHY","title6":"style__title6___2E_cG","title3":"style__title3___qpZuD","title7":"style__title7___21JO_","title8":"style__title8___36gBQ","image1":"style__image1___25W0l","image":"style__image___3H8hz","paragraph1":"style__paragraph1___1m33N","paragraph2":"style__paragraph2___3OtNY","paragraph3":"style__paragraph3___3qs1J","paragraph4":"style__paragraph4___3oqJH","paragraph5":"style__paragraph5___akVWK","commitment":"style__commitment___2dWq9","svg":"style__svg___25w61"};
 
 /***/ },
 /* 46 */
@@ -2753,14 +2761,14 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___3P8Pp","vCenter":"style__vCenter___2Et1N","vCenterRel":"style__vCenterRel___3DCRz","hCenter":"style__hCenter___wKyoU","inheritHeight":"style__inheritHeight___1zL8U","hideOverflow":"style__hideOverflow___3ZV71","icon-sprites":"style__icon-sprites___8RQVq","image1":"style__image1___3KY44","wrapper1":"style__wrapper1___3SYJt","wrapper2":"style__wrapper2___Q9fKW","paragraph1":"style__paragraph1___3QbsS","paragraph2":"style__paragraph2___26NJ4","paragraph3":"style__paragraph3___3Uj57","paragraph4":"style__paragraph4___3ImpF","sideSwipe":"style__sideSwipe___13jwX","button1":"style__button1___1pbIc","button2":"style__button2___1FucC","title1":"style__title1___1w9oV","title2":"style__title2___2-ry2","title4":"style__title4___2yc3s","title5":"style__title5___TtpHn","title6":"style__title6___eDkzQ","title3":"style__title3___L0OLC","title7":"style__title7___1eGbP","title8":"style__title8___3UdhB","svg":"style__svg___3Smom"};
+	module.exports = {"fCenter":"style__fCenter___3P8Pp","vCenter":"style__vCenter___2Et1N","vCenterRel":"style__vCenterRel___3DCRz","hCenter":"style__hCenter___wKyoU","inheritHeight":"style__inheritHeight___1zL8U","hideOverflow":"style__hideOverflow___3ZV71","icon-sprites":"style__icon-sprites___8RQVq","image1":"style__image1___3KY44","wrapper1":"style__wrapper1___3SYJt","wrapper2":"style__wrapper2___Q9fKW","paragraph1":"style__paragraph1___3QbsS","paragraph2":"style__paragraph2___26NJ4","paragraph3":"style__paragraph3___3Uj57","paragraph4":"style__paragraph4___3ImpF","paragraph5":"style__paragraph5___3cZ7N","sideSwipe":"style__sideSwipe___13jwX","button1":"style__button1___1pbIc","button2":"style__button2___1FucC","button3":"style__button3___1uWcc","title1":"style__title1___1w9oV","title2":"style__title2___2-ry2","title4":"style__title4___2yc3s","title5":"style__title5___TtpHn","title6":"style__title6___eDkzQ","title3":"style__title3___L0OLC","title7":"style__title7___1eGbP","title8":"style__title8___3UdhB","svg":"style__svg___3Smom"};
 
 /***/ },
 /* 48 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___2vKQO","vCenter":"style__vCenter___1vanJ","vCenterRel":"style__vCenterRel___1rwm1","hCenter":"style__hCenter___ddexn","inheritHeight":"style__inheritHeight___17DwM","hideOverflow":"style__hideOverflow___3hU3x","icon-sprites":"style__icon-sprites___3jYla","title1":"style__title1___2DvLL","title2":"style__title2___3c7eJ","title4":"style__title4___2RV5L","title5":"style__title5___Fa1hY","title6":"style__title6___1WoJH","title3":"style__title3___3PmPe","title7":"style__title7___eYxlr","title8":"style__title8___18YDU","paragraph1":"style__paragraph1___14JoB","paragraph2":"style__paragraph2___21F7M","paragraph3":"style__paragraph3___2r_Hb","paragraph4":"style__paragraph4___1Nxee","wrapper":"style__wrapper___NEBTv","svg":"style__svg___XiDUT"};
+	module.exports = {"fCenter":"style__fCenter___2vKQO","vCenter":"style__vCenter___1vanJ","vCenterRel":"style__vCenterRel___1rwm1","hCenter":"style__hCenter___ddexn","inheritHeight":"style__inheritHeight___17DwM","hideOverflow":"style__hideOverflow___3hU3x","icon-sprites":"style__icon-sprites___3jYla","title1":"style__title1___2DvLL","title2":"style__title2___3c7eJ","title4":"style__title4___2RV5L","title5":"style__title5___Fa1hY","title6":"style__title6___1WoJH","title3":"style__title3___3PmPe","title7":"style__title7___eYxlr","title8":"style__title8___18YDU","paragraph1":"style__paragraph1___14JoB","paragraph2":"style__paragraph2___21F7M","paragraph3":"style__paragraph3___2r_Hb","paragraph4":"style__paragraph4___1Nxee","paragraph5":"style__paragraph5___2PLE2","wrapper":"style__wrapper___NEBTv","svg":"style__svg___XiDUT"};
 
 /***/ },
 /* 49 */
@@ -2999,7 +3007,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","sideSwipe":"style__sideSwipe___1FVlo","button1":"style__button1___3ZmPV","button":"style__button___1lbNE","button2":"style__button2___2shnn","title1":"style__title1___1gW4S","title2":"style__title2___2Tj1e","title4":"style__title4___3J4Je","title5":"style__title5___2Nimp","title6":"style__title6___1J_L3","title":"style__title___SyWrl","title3":"style__title3___1HOPW","title7":"style__title7___2tzA4","subtitle":"style__subtitle___28u9N","title8":"style__title8___2p7DZ","paragraph1":"style__paragraph1___3jelK","paragraph2":"style__paragraph2___3QqbA","paragraph":"style__paragraph___2nuu4","paragraph3":"style__paragraph3___2muKz","paragraph4":"style__paragraph4___1geTk","slide":"style__slide___1g7hl","overbanner":"style__overbanner___2RmA_","controls":"style__controls___MnoRe"};
+	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","sideSwipe":"style__sideSwipe___1FVlo","button1":"style__button1___3ZmPV","button":"style__button___1lbNE","button2":"style__button2___2shnn","button3":"style__button3___3VbYO","title1":"style__title1___1gW4S","title2":"style__title2___2Tj1e","title4":"style__title4___3J4Je","title5":"style__title5___2Nimp","title6":"style__title6___1J_L3","title":"style__title___SyWrl","title3":"style__title3___1HOPW","title7":"style__title7___2tzA4","subtitle":"style__subtitle___28u9N","title8":"style__title8___2p7DZ","paragraph1":"style__paragraph1___3jelK","paragraph2":"style__paragraph2___3QqbA","paragraph":"style__paragraph___2nuu4","paragraph3":"style__paragraph3___2muKz","paragraph4":"style__paragraph4___1geTk","paragraph5":"style__paragraph5___30-m9","slide":"style__slide___1g7hl","overbanner":"style__overbanner___2RmA_","controls":"style__controls___MnoRe"};
 
 /***/ },
 /* 52 */
@@ -3153,7 +3161,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___zkvoI","vCenter":"style__vCenter___1amrF","arrow":"style__arrow___YRQ8M","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu","image1":"style__image1___1XYmO","image":"style__image___3La5m","paragraph1":"style__paragraph1___GDSgG","paragraph2":"style__paragraph2___YHIz0","paragraph":"style__paragraph___altZf","paragraph3":"style__paragraph3___3TUGd","paragraph4":"style__paragraph4___36NX-","sideSwipe":"style__sideSwipe___10nak","button1":"style__button1___1wRom","button":"style__button___f4bc2","button2":"style__button2___2IfG_","title1":"style__title1___1ALfY","subtitle":"style__subtitle___2oUeT","title2":"style__title2___1rAMk","title4":"style__title4___2PoEp","title5":"style__title5___3oOGE","title6":"style__title6___3AN-Q","title":"style__title___2mlf9","title3":"style__title3___3_np7","title7":"style__title7___JQtWA","title8":"style__title8___1nNSa","wrapper":"style__wrapper___1BJ7Q","hr":"style__hr___37AfO","controls":"style__controls___1nXQ8"};
+	module.exports = {"fCenter":"style__fCenter___zkvoI","vCenter":"style__vCenter___1amrF","arrow":"style__arrow___YRQ8M","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu","image1":"style__image1___1XYmO","image":"style__image___3La5m","paragraph1":"style__paragraph1___GDSgG","paragraph2":"style__paragraph2___YHIz0","paragraph":"style__paragraph___altZf","paragraph3":"style__paragraph3___3TUGd","paragraph4":"style__paragraph4___36NX-","paragraph5":"style__paragraph5___1IKiM","sideSwipe":"style__sideSwipe___10nak","button1":"style__button1___1wRom","button":"style__button___f4bc2","button2":"style__button2___2IfG_","button3":"style__button3___90xKI","title1":"style__title1___1ALfY","subtitle":"style__subtitle___2oUeT","title2":"style__title2___1rAMk","title4":"style__title4___2PoEp","title5":"style__title5___3oOGE","title6":"style__title6___3AN-Q","title":"style__title___2mlf9","title3":"style__title3___3_np7","title7":"style__title7___JQtWA","title8":"style__title8___1nNSa","wrapper":"style__wrapper___1BJ7Q","hr":"style__hr___37AfO","controls":"style__controls___1nXQ8"};
 
 /***/ },
 /* 54 */
@@ -3260,14 +3268,14 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___2OwT_","vCenter":"style__vCenter___2CepC","vCenterRel":"style__vCenterRel___3KKir","hCenter":"style__hCenter___3pCCD","inheritHeight":"style__inheritHeight___8XMfg","hideOverflow":"style__hideOverflow___3CRd7","icon-sprites":"style__icon-sprites___xUhFv","image1":"style__image1___s6jf9","image":"style__image___3_x2J","wrapper1":"style__wrapper1___QX2J1","wrapper2":"style__wrapper2___17lUu","paragraph1":"style__paragraph1___dfw1j","paragraph2":"style__paragraph2___338-V","paragraph":"style__paragraph___2V_vx","paragraph3":"style__paragraph3___3UGDB","paragraph4":"style__paragraph4___2cXGH","sideSwipe":"style__sideSwipe___2-mAi","button1":"style__button1___BIa7T","button":"style__button___3VSSK","button2":"style__button2___3QGUS","title1":"style__title1___3cDQX","title2":"style__title2___m8Ozm","title4":"style__title4___3niwQ","title5":"style__title5___21xX0","title6":"style__title6___2KofO","title":"style__title___1d6P1","title3":"style__title3___2xYWi","title7":"style__title7___Vrojr","title8":"style__title8___23y-T","wrapper":"style__wrapper___TskVX"};
+	module.exports = {"fCenter":"style__fCenter___2OwT_","vCenter":"style__vCenter___2CepC","vCenterRel":"style__vCenterRel___3KKir","hCenter":"style__hCenter___3pCCD","inheritHeight":"style__inheritHeight___8XMfg","hideOverflow":"style__hideOverflow___3CRd7","icon-sprites":"style__icon-sprites___xUhFv","image1":"style__image1___s6jf9","image":"style__image___3_x2J","wrapper1":"style__wrapper1___QX2J1","wrapper2":"style__wrapper2___17lUu","paragraph1":"style__paragraph1___dfw1j","paragraph2":"style__paragraph2___338-V","paragraph":"style__paragraph___2V_vx","paragraph3":"style__paragraph3___3UGDB","paragraph4":"style__paragraph4___2cXGH","paragraph5":"style__paragraph5___O7bBq","sideSwipe":"style__sideSwipe___2-mAi","button1":"style__button1___BIa7T","button":"style__button___3VSSK","button2":"style__button2___3QGUS","button3":"style__button3___1UDFh","title1":"style__title1___3cDQX","title2":"style__title2___m8Ozm","title4":"style__title4___3niwQ","title5":"style__title5___21xX0","title6":"style__title6___2KofO","title":"style__title___1d6P1","title3":"style__title3___2xYWi","title7":"style__title7___Vrojr","title8":"style__title8___23y-T","wrapper":"style__wrapper___TskVX"};
 
 /***/ },
 /* 56 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1Q73D","vCenter":"style__vCenter___3XNrH","vCenterRel":"style__vCenterRel___1YeFJ","hCenter":"style__hCenter___1mVF7","inheritHeight":"style__inheritHeight___23Hgw","hideOverflow":"style__hideOverflow___25XXq","icon-sprites":"style__icon-sprites___2Iyi8","title1":"style__title1___1LBCJ","title2":"style__title2___ww8Lf","title4":"style__title4___1hQD3","title5":"style__title5___3wxeQ","title6":"style__title6___1W4EN","title3":"style__title3___1rrjg","title7":"style__title7___2cEVO","title8":"style__title8___2jhdQ","paragraph1":"style__paragraph1___3dDFe","paragraph2":"style__paragraph2___1bVFj","paragraph3":"style__paragraph3___3RtTB","paragraph4":"style__paragraph4___2KvJl","wrapper":"style__wrapper___2hxyL"};
+	module.exports = {"fCenter":"style__fCenter___1Q73D","vCenter":"style__vCenter___3XNrH","vCenterRel":"style__vCenterRel___1YeFJ","hCenter":"style__hCenter___1mVF7","inheritHeight":"style__inheritHeight___23Hgw","hideOverflow":"style__hideOverflow___25XXq","icon-sprites":"style__icon-sprites___2Iyi8","title1":"style__title1___1LBCJ","title2":"style__title2___ww8Lf","title4":"style__title4___1hQD3","title5":"style__title5___3wxeQ","title6":"style__title6___1W4EN","title3":"style__title3___1rrjg","title7":"style__title7___2cEVO","title8":"style__title8___2jhdQ","paragraph1":"style__paragraph1___3dDFe","paragraph2":"style__paragraph2___1bVFj","paragraph3":"style__paragraph3___3RtTB","paragraph4":"style__paragraph4___2KvJl","paragraph5":"style__paragraph5___32RKi","wrapper":"style__wrapper___2hxyL"};
 
 /***/ },
 /* 57 */
@@ -3491,7 +3499,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___3oQI6","vCenter":"style__vCenter___oZn6y","vCenterRel":"style__vCenterRel___1q8U5","hCenter":"style__hCenter___3-mPZ","inheritHeight":"style__inheritHeight___1pvpY","hideOverflow":"style__hideOverflow___1wBei","icon-sprites":"style__icon-sprites___3VAjS","image1":"style__image1___2YDfQ","paragraph1":"style__paragraph1___wwuTz","paragraph2":"style__paragraph2___1wqDF","paragraph":"style__paragraph___OBox-","paragraph3":"style__paragraph3___1FdtX","paragraph4":"style__paragraph4___2OZAv","sideSwipe":"style__sideSwipe___2R1ie","button1":"style__button1___2I4ug","button2":"style__button2___35m1v","title1":"style__title1___2rKvl","title2":"style__title2___1KnQH","title":"style__title___2N5Bv","title4":"style__title4___1JbOI","title5":"style__title5___2lYZQ","title6":"style__title6___31YeL","title3":"style__title3___2OcWE","title7":"style__title7___2ByrJ","title8":"style__title8___2K7RZ","subtitle":"style__subtitle___24FM7","svg":"style__svg___opN4I"};
+	module.exports = {"fCenter":"style__fCenter___3oQI6","vCenter":"style__vCenter___oZn6y","vCenterRel":"style__vCenterRel___1q8U5","hCenter":"style__hCenter___3-mPZ","inheritHeight":"style__inheritHeight___1pvpY","hideOverflow":"style__hideOverflow___1wBei","icon-sprites":"style__icon-sprites___3VAjS","image1":"style__image1___2YDfQ","paragraph1":"style__paragraph1___wwuTz","paragraph2":"style__paragraph2___1wqDF","paragraph":"style__paragraph___OBox-","paragraph3":"style__paragraph3___1FdtX","paragraph4":"style__paragraph4___2OZAv","paragraph5":"style__paragraph5___1TG0A","sideSwipe":"style__sideSwipe___2R1ie","button1":"style__button1___2I4ug","button2":"style__button2___35m1v","button3":"style__button3___2Yf9W","title1":"style__title1___2rKvl","title2":"style__title2___1KnQH","title4":"style__title4___1JbOI","title5":"style__title5___2lYZQ","title":"style__title___2N5Bv","title6":"style__title6___31YeL","title3":"style__title3___2OcWE","title7":"style__title7___2ByrJ","title8":"style__title8___2K7RZ","subtitle":"style__subtitle___24FM7","svg":"style__svg___opN4I"};
 
 /***/ },
 /* 60 */
@@ -3524,7 +3532,7 @@
 
 	var _block2 = _interopRequireDefault(_block);
 
-	var _block3 = __webpack_require__(63);
+	var _block3 = __webpack_require__(64);
 
 	var _block4 = _interopRequireDefault(_block3);
 
@@ -3601,7 +3609,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
-	// const style = require('./style.scss');
+	var style = __webpack_require__(63);
 
 	var Block1 = function (_React$Component) {
 	  _inherits(Block1, _React$Component);
@@ -3618,15 +3626,16 @@
 	      var _props$data = this.props.data;
 	      var images = _props$data.images;
 	      var buttons = _props$data.buttons;
+	      // const imgUrl = images && images.image1 && images.image1.src ? images.image1.src.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/contacto_map.png';
 
-	      var imgUrl = images && images.image1 && images.image1.src ? images.image1.src.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/demo.png';
+	      var imgUrl = '/images/contacto_map.jpg';
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement('img', { src: imgUrl, alt: images.image1.alt }),
+	        _react2.default.createElement('img', { cassName: style.image, src: imgUrl, alt: images.image1.alt }),
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { to: buttons.button1.href },
+	          { className: style.button, to: buttons.button1.href },
 	          buttons.button1.title
 	        )
 	      ) : null;
@@ -3645,6 +3654,13 @@
 
 /***/ },
 /* 63 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___3WsSe","vCenter":"style__vCenter___3G_X_","vCenterRel":"style__vCenterRel___2rlOE","hCenter":"style__hCenter___3ARcP","inheritHeight":"style__inheritHeight___1YsqB","hideOverflow":"style__hideOverflow___ps_Tr","icon-sprites":"style__icon-sprites___2f7vT","image1":"style__image1___1oYSl","paragraph1":"style__paragraph1___3JnQd","paragraph2":"style__paragraph2___3M3qm","paragraph3":"style__paragraph3___6lKhK","paragraph4":"style__paragraph4___1Z42s","paragraph5":"style__paragraph5___1v105","sideSwipe":"style__sideSwipe___50l2S","button1":"style__button1___1iQls","button":"style__button___6iE0P","button2":"style__button2___2nT5Y","button3":"style__button3___1WIju","title1":"style__title1___3f0o0","title2":"style__title2___XQgLg","title4":"style__title4___BpZsL","title5":"style__title5___hKWjC","title6":"style__title6___2GSXY","title3":"style__title3___2f5QU","title7":"style__title7___3_kU1","title8":"style__title8___2cLGW","image":"style__image___mSywh"};
+
+/***/ },
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3665,11 +3681,15 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
+	var _svg = __webpack_require__(18);
+
+	var _svg2 = _interopRequireDefault(_svg);
+
 	var _sanitize = __webpack_require__(37);
 
 	var _sanitize2 = _interopRequireDefault(_sanitize);
 
-	var _form = __webpack_require__(64);
+	var _form = __webpack_require__(65);
 
 	var _form2 = _interopRequireDefault(_form);
 
@@ -3679,8 +3699,10 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// const style = require('./style.scss');
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
+
+
+	var style = __webpack_require__(67);
 
 	var Block2 = function (_React$Component) {
 	  _inherits(Block2, _React$Component);
@@ -3713,29 +3735,30 @@
 	              { className: 'col-sm-6 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
-	                titles.title1
+	                { className: style.title },
+	                titles.title1,
+	                _react2.default.createElement(_svg2.default, { network: 'location', className: style.svg })
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph2) }),
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph2) }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: buttons.button1.href },
+	                { className: style.gmap, to: buttons.button1.href },
 	                buttons.button1.title
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph3) }),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph4) }),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph5) })
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph3) }),
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph4) }),
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph5) })
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-sm-6 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
-	                null,
+	                { className: style.title },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('p', { dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph6) }),
+	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph6) }),
 	              _react2.default.createElement(_form2.default, null)
 	            )
 	          )
@@ -3755,7 +3778,7 @@
 	};
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3786,7 +3809,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 600, 4] */
 
-	var style = __webpack_require__(65);
+	var style = __webpack_require__(66);
 
 	var Form1 = function (_React$Component) {
 	  _inherits(Form1, _React$Component);
@@ -3948,56 +3971,56 @@
 	        { id: 'form', className: style.form + ' form-horizontal' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
+	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_name', className: 'col-sm-3 control-label' },
-	            'Nombre'
+	            { id: 'lab_name', className: 'col-xs-3 control-label' },
+	            'Nombre:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-sm-9' },
+	            { className: 'col-xs-9' },
 	            _react2.default.createElement('input', { type: 'text', name: 'name', onChange: this.onChangeHandler, value: name.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
+	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_email', className: 'col-sm-3 control-label' },
-	            'Correo'
+	            { id: 'lab_email', className: 'col-xs-3 control-label' },
+	            'Correo:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-sm-9' },
+	            { className: 'col-xs-9' },
 	            _react2.default.createElement('input', { type: 'text', name: 'email', onChange: this.onChangeHandler, value: email.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
+	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_tel', className: 'col-sm-3 control-label' },
-	            'Teléfono'
+	            { id: 'lab_tel', className: 'col-xs-3 control-label' },
+	            'Teléfono:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-sm-9' },
+	            { className: 'col-xs-9' },
 	            _react2.default.createElement('input', { type: 'tel', name: 'tel', onChange: this.onChangeHandler, value: tel.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
+	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_message', className: 'col-sm-10 control-label' },
-	            'Mensaje'
+	            { id: 'lab_message', className: 'col-sm-12 control-label' },
+	            'Mensaje:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -4025,12 +4048,8 @@
 	          { className: 'pull-right' },
 	          _react2.default.createElement(
 	            'a',
-	            { className: style.d, onClick: this.submitFormHandler },
-	            _react2.default.createElement(
-	              'div',
-	              { className: style.title },
-	              'ENVIAR'
-	            )
+	            { className: style.submit, onClick: this.submitFormHandler },
+	            'ENVIAR'
 	          )
 	        )
 	      );
@@ -4043,10 +4062,18 @@
 	exports.default = Form1;
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___365qk","vCenter":"style__vCenter___9LFiT","vCenterRel":"style__vCenterRel___27ebh","hCenter":"style__hCenter___3MSN5","inheritHeight":"style__inheritHeight___20X8j","hideOverflow":"style__hideOverflow___1e_Sa","icon-sprites":"style__icon-sprites___SBb6q","image1":"style__image1___20ULB","paragraph1":"style__paragraph1___1Iuas","paragraph2":"style__paragraph2___XLNUn","paragraph3":"style__paragraph3___cQhzG","paragraph4":"style__paragraph4___3o8-x","paragraph5":"style__paragraph5___-5J8a","sideSwipe":"style__sideSwipe___3Jh_M","button1":"style__button1___QW0Tv","submit":"style__submit___2YBRa","button2":"style__button2___3fzL1","button3":"style__button3___1LtgP","title1":"style__title1___2DL5-","title2":"style__title2___3etcM","title4":"style__title4___33kmt","title5":"style__title5___2k_sU","title6":"style__title6___1dv-o","title3":"style__title3___8tZ0C","title7":"style__title7___OUaen","title8":"style__title8___1LvKh","form":"style__form___1nnSk","formGroup":"style__formGroup___1VfYe"};
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"fCenter":"style__fCenter___YPy8K","vCenter":"style__vCenter___32xVO","vCenterRel":"style__vCenterRel___29zgs","hCenter":"style__hCenter___2lorl","inheritHeight":"style__inheritHeight___VvRBI","hideOverflow":"style__hideOverflow___2GeSp","icon-sprites":"style__icon-sprites___3vhaB","image1":"style__image1___2KQtF","paragraph1":"style__paragraph1___21zOk","paragraph2":"style__paragraph2___1ISwm","paragraph3":"style__paragraph3___34fOz","paragraph4":"style__paragraph4___1tgYT","paragraph5":"style__paragraph5___BDRxV","paragraph":"style__paragraph___29758","sideSwipe":"style__sideSwipe___1IOUP","button1":"style__button1___1cwjy","button2":"style__button2___hQ_-V","button3":"style__button3___3HwaY","gmap":"style__gmap___1uAlR","title1":"style__title1___OAVsV","title2":"style__title2___3iVlU","title4":"style__title4___JohwZ","title5":"style__title5___3Apbg","title6":"style__title6___8Y1Ek","title":"style__title___31zi9","title3":"style__title3___173Gl","title7":"style__title7___5Kp7I","title8":"style__title8___3uCuH","svg":"style__svg___38pi8"};
 
 /***/ }
 /******/ ]);

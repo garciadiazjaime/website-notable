@@ -134,6 +134,12 @@ export default class SVG extends React.Component {
         <polyline points="56.1 78.9 28.5 78.9 28.5 70.9 55.7 70.9"  fill="none" strokeWidth="3" stroke="#fff"/>
         <polyline points="56.1 70.9 28.5 70.9 28.5 58.3 59.3 58.3 59.3 66.7" fill="none" strokeWidth="3" stroke="#fff"/></svg>);
         break;
+      case 'location':
+        return (<svg xmlns="http://www.w3.org/2000/svg" width="18" height="30" viewBox="0 0 17.5 30" className={className}>
+          <path d="M8.8 5.4c-1.8 0-3.3 1.5-3.3 3.3 0 1.8 1.5 3.3 3.3 3.3 1.8 0 3.3-1.5 3.3-3.3C12.1 6.9 10.6 5.4 8.8 5.4zM8.8 10.1c-0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4 0.8 0 1.4 0.6 1.4 1.4C10.1 9.5 9.5 10.1 8.8 10.1z" fill="#CBA764"/>
+        <path d="M8.8 0C3.9 0 0 3.9 0 8.8c0 1.1 0.2 2.1 0.6 3.2L7.9 29.4C8 29.8 8.4 30 8.8 30c0 0 0 0 0 0 0.4 0 0.8-0.2 0.9-0.6l7.3-17.5c0.4-1 0.6-2.1 0.6-3.1C17.5 3.9 13.6 0 8.8 0zM15.1 11.3L8.8 26.5 2.5 11.5l-0.1-0.3C2.1 10.4 2 9.6 2 8.8c0-3.8 3.1-6.8 6.8-6.8 3.8 0 6.8 3.1 6.8 6.8C15.6 9.6 15.4 10.4 15.1 11.3z" fill="#CBA764"/>
+        </svg>);
+        break;
       default:
         return (<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" className={className}>
           <circle cx="15" cy="15" r="15"/>
