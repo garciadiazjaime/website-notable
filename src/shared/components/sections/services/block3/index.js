@@ -33,7 +33,7 @@ export default class Block3 extends React.Component {
           </div>
           <div className="col-sm-3 col-xs-12">
             <SVG network="servicios_ejecucion" className={style.svg} />
-            <h3 className={style.subtitle}>{titles.title4}</h3>
+            <h3 className={style.subtitle}>{titles.title5}</h3>
             <p className={style.paragraph} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph4)} />
           </div>
         </div>
