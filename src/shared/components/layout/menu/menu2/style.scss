@@ -188,6 +188,9 @@ $hamburger-background: lighten($blue, 10%)!important;
   }
 }
 @media#{$isPhone}{
+  .navbarWrapper{
+    padding: 0;
+  }
   .bigBrandContainer{
     display: none;
   }

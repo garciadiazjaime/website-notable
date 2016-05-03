@@ -41,3 +41,11 @@
 	height: 334px;
 	width: 118px;
 }
+@media#{$isPhone}{
+  .bannerContainer{
+    margin-top: 50px;
+  }
+	.controls{
+		width: 50px;
+	}
+}

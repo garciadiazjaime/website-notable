@@ -26,6 +26,12 @@ export default class AppHandler extends React.Component {
     // this.googleAnalytics();
     if (_.isEmpty(this.state.data)) {
       this.loadData();
+      const width = window.innerWidth;
+      if (width < 768) {
+        $('#menu_wrapper').addClass('navbar-fixed-top');
+        $('.navbar-brand').css('display', 'block');
+        $('.navbar-icons').css('display', 'block');
+      }
     }
   }
 
@@ -46,14 +52,21 @@ export default class AppHandler extends React.Component {
 
   onScroll() {
     const offset = window.pageYOffset;
-    if (offset > 386) {
+    const width = window.innerWidth;
+    if (width < 768) {
       $('#menu_wrapper').addClass('navbar-fixed-top');
       $('.navbar-brand').css('display', 'block');
       $('.navbar-icons').css('display', 'block');
     } else {
-      $('#menu_wrapper').removeClass('navbar-fixed-top');
-      $('.navbar-brand').css('display', 'none');
-      $('.navbar-icons').css('display', 'none');
+      if (offset > 386) {
+        $('#menu_wrapper').addClass('navbar-fixed-top');
+        $('.navbar-brand').css('display', 'block');
+        $('.navbar-icons').css('display', 'block');
+      } else {
+        $('#menu_wrapper').removeClass('navbar-fixed-top');
+        $('.navbar-brand').css('display', 'none');
+        $('.navbar-icons').css('display', 'none');
+      }
     }
   }
 

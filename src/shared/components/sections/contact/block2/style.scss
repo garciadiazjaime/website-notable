@@ -10,6 +10,7 @@
   margin-top: 100px;
   margin-bottom: 50px;
   position: relative;
+  letter-spacing: 5px;
 }
 .paragraph{
   @extend .paragraph5;
@@ -24,4 +25,9 @@
   position: absolute;
   bottom: -80px;
   left: - 30px;
+}
+@media #{$isPhone}{
+  .title{
+		font-size: 30px;
+	}
 }

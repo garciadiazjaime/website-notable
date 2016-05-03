@@ -23,5 +23,7 @@
 }
 // --- Responsive
 @media #{$isPhone}{
-  .title{}
+  .title3{
+		font-size: 30px;
+	}
 }
