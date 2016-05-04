@@ -6,7 +6,7 @@
 // ---- main slider
 .slide{
 	height: 619px;
-	background-sixe: cover;
+	background-size: cover;
 	background-position: center center;
 }
 .overbanner{
@@ -40,6 +40,9 @@
 	opacity: 1;
 	height: 334px;
 	width: 118px;
+	svg{
+		margin-top: 30px;
+	}
 }
 @media#{$isPhone}{
   .bannerContainer{
