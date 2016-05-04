@@ -43,5 +43,11 @@
 	width: 118px;
 }
 .arrow{
-	@extend .vCenter;
+	@extend .fCenter;
+}
+@media#{$isPhone}{
+  .controls{
+    background: none;
+    width: 50px;
+  }
 }

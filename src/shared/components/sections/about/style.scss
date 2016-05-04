@@ -14,3 +14,11 @@
     fill: $gold;
   }
 }
+@media #{$isPhone}{
+  .title5{
+		font-size: 30px;
+    &::after{
+      width: 100%;
+    }
+	}
+}

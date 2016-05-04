@@ -16,3 +16,11 @@
   text-align: center;
   margin-bottom: 100px;
 }
+@media #{$isPhone}{
+  .title5{
+		font-size: 30px;
+    &::after{
+      width: 100%;
+    }
+	}
+}
