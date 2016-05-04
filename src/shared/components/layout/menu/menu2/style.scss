@@ -21,13 +21,14 @@ $hamburger-background: lighten($blue, 10%)!important;
 
 // ********** The full navbar *********************
 .navbarWrapper{
-  padding: 50px 0;
+  padding: 50px 0 31px;
   background-color: $background-color;
 }
 .navbarDefault {
   @include border-radius(0);
   background-color: $background-color;
   height: $height;
+  min-height: $height;
   border: none!important;
   margin-bottom: 0;
 }
@@ -38,7 +39,7 @@ $hamburger-background: lighten($blue, 10%)!important;
 }
 .bigBrandContainer{
   background-color: $background-color;
-  padding: 50px 0;
+  padding: 0 0 31px;
 }
 .bigBrand{
   @extend .icon-sprites;
