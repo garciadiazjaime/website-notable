@@ -138,24 +138,24 @@ export default class Form1 extends React.Component {
 
     return (<form id="form" className={style.form + ' form-horizontal'}>
         <div className={'form-group ' + style.formGroup}>
-          <label id="lab_name" className="col-xs-3 control-label">Nombre:</label>
-          <div className="col-xs-9">
+          <label id="lab_name" className="col-xs-2 control-label">Nombre:</label>
+          <div className="col-xs-10">
             <input type="text" name="name" onChange={this.onChangeHandler} value={name.value} />
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
         <div className={'form-group ' + style.formGroup}>
-          <label id="lab_email" className="col-xs-3 control-label">Correo:</label>
-          <div className="col-xs-9">
+          <label id="lab_email" className="col-xs-2 control-label">Correo:</label>
+          <div className="col-xs-10">
             <input type="text" name="email" onChange={this.onChangeHandler} value={email.value}/>
           </div>
           <div className={style.borderBottom2}></div>
         </div>
 
         <div className={'form-group ' + style.formGroup}>
-          <label id="lab_tel" className="col-xs-3 control-label">Teléfono:</label>
-          <div className="col-xs-9">
+          <label id="lab_tel" className="col-xs-2 control-label">Teléfono:</label>
+          <div className="col-xs-10">
             <input type="tel" name="tel" onChange={this.onChangeHandler} value={tel.value}/>
           </div>
           <div className={style.borderBottom2}></div>

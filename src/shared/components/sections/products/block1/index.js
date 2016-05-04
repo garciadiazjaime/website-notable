@@ -34,7 +34,7 @@ export default class Block1 extends React.Component {
         arrow: style.arrow,
       },
     };
-    return _.isArray(slides) && slides.length && titles ? (<div>
+    return _.isArray(slides) && slides.length && titles ? (<div className={style.bannerContainer}>
       <Carousel id="main-carousel2" interval={8000} indicators={false} classes={carouselClasses}>
         {this.renderItems(slides)}
       </Carousel>

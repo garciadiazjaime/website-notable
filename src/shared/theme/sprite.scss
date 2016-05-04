@@ -1,5 +1,5 @@
-$sprites-brand: -0px -0px 437px 256px;
-$sprites-facebook-icon: -0px -256px 14px 27px;
+$sprites-brand: -0px -0px 218px 128px;
+$sprites-facebook-icon: -0px -128px 14px 27px;
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
 }

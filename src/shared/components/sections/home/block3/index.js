@@ -14,7 +14,7 @@ export default class Block3 extends React.Component {
     return !_.isEmpty(this.props.data) ? (<div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div className="col-xs-12 col-sm-10 col-sm-offset-1">
             <h2 className={style.title1}>{titles.title1}</h2>
             <p className={style.paragraph1} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
           </div>
