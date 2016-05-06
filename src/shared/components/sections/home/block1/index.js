@@ -47,7 +47,7 @@ export default class Block1 extends React.Component {
       },
     };
     return _.isArray(slides) && slides.length ? (<div>
-      <Carousel id="main-carousel2" interval={8000} indicators={false} controls={false} classes={carouselClasses}>
+      <Carousel id="main-carousel2" interval={8000} indicators={false} classes={carouselClasses}>
         {this.renderItems(slides)}
       </Carousel>
     </div>) : null;

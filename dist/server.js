@@ -722,6 +722,12 @@
 	      // this.googleAnalytics();
 	      if (_lodash2.default.isEmpty(this.state.data)) {
 	        this.loadData();
+	        var width = window.innerWidth;
+	        if (width < 768) {
+	          $('#menu_wrapper').addClass('navbar-fixed-top');
+	          $('.navbar-brand').css('display', 'block');
+	          $('.navbar-icons').css('display', 'block');
+	        }
 	      }
 	    }
 	  }, {
@@ -746,14 +752,21 @@
 	    key: 'onScroll',
 	    value: function onScroll() {
 	      var offset = window.pageYOffset;
-	      if (offset > 386) {
+	      var width = window.innerWidth;
+	      if (width < 768) {
 	        $('#menu_wrapper').addClass('navbar-fixed-top');
 	        $('.navbar-brand').css('display', 'block');
 	        $('.navbar-icons').css('display', 'block');
 	      } else {
-	        $('#menu_wrapper').removeClass('navbar-fixed-top');
-	        $('.navbar-brand').css('display', 'none');
-	        $('.navbar-icons').css('display', 'none');
+	        if (offset > 386) {
+	          $('#menu_wrapper').addClass('navbar-fixed-top');
+	          $('.navbar-brand').css('display', 'block');
+	          $('.navbar-icons').css('display', 'block');
+	        } else {
+	          $('#menu_wrapper').removeClass('navbar-fixed-top');
+	          $('.navbar-brand').css('display', 'none');
+	          $('.navbar-icons').css('display', 'none');
+	        }
 	      }
 	    }
 	  }, {
@@ -2164,7 +2177,7 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-xs-12 col-sm-8 col-sm-offset-2' },
+	              { className: 'col-xs-12 col-sm-10 col-sm-offset-1' },
 	              _react2.default.createElement(
 	                'h2',
 	                { className: style.title1 },
@@ -2270,7 +2283,7 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-6 col-xs-12' },
+	              { className: 'col-sm-10 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
 	                { className: style.mainTitle },
@@ -2381,6 +2394,7 @@
 	        title1: style.title5,
 	        paragraph1: style.paragraph4
 	      };
+	      var block2classes = 'col-xs-12 col-sm-6 col-sm-offset-3';
 	      var classes = {
 	        svg: style.svg,
 	        col1: 'col-xs-12 col-sm-6',
@@ -2389,7 +2403,7 @@
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_block2.default, { data: block1, classes: 'col-xs-12 col-sm-6 col-sm-offset-3' }),
+	        _react2.default.createElement(_block2.default, { data: block1, classes: block2classes }),
 	        _react2.default.createElement(_block4.default, { data: block2, classes: classes }),
 	        _react2.default.createElement(_block6.default, { data: block3, style: block3Styles }),
 	        _react2.default.createElement(_block8.default, { data: block4 })
@@ -2946,7 +2960,7 @@
 	      };
 	      return _lodash2.default.isArray(slides) && slides.length && titles ? _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: style.bannerContainer },
 	        _react2.default.createElement(
 	          _carousel2.default,
 	          { id: 'main-carousel2', interval: 8000, indicators: false, classes: carouselClasses },
@@ -3007,7 +3021,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","sideSwipe":"style__sideSwipe___1FVlo","button1":"style__button1___3ZmPV","button":"style__button___1lbNE","button2":"style__button2___2shnn","button3":"style__button3___3VbYO","title1":"style__title1___1gW4S","title2":"style__title2___2Tj1e","title4":"style__title4___3J4Je","title5":"style__title5___2Nimp","title6":"style__title6___1J_L3","title":"style__title___SyWrl","title3":"style__title3___1HOPW","title7":"style__title7___2tzA4","subtitle":"style__subtitle___28u9N","title8":"style__title8___2p7DZ","paragraph1":"style__paragraph1___3jelK","paragraph2":"style__paragraph2___3QqbA","paragraph":"style__paragraph___2nuu4","paragraph3":"style__paragraph3___2muKz","paragraph4":"style__paragraph4___1geTk","paragraph5":"style__paragraph5___30-m9","slide":"style__slide___1g7hl","overbanner":"style__overbanner___2RmA_","controls":"style__controls___MnoRe"};
+	module.exports = {"fCenter":"style__fCenter___1j0pv","vCenter":"style__vCenter___2KQFQ","vCenterRel":"style__vCenterRel___34eYy","hCenter":"style__hCenter___1Lkdf","inheritHeight":"style__inheritHeight___1q40G","hideOverflow":"style__hideOverflow___DrxCZ","icon-sprites":"style__icon-sprites___3tV9U","sideSwipe":"style__sideSwipe___1FVlo","button1":"style__button1___3ZmPV","button":"style__button___1lbNE","button2":"style__button2___2shnn","button3":"style__button3___3VbYO","title1":"style__title1___1gW4S","title2":"style__title2___2Tj1e","title4":"style__title4___3J4Je","title5":"style__title5___2Nimp","title6":"style__title6___1J_L3","title":"style__title___SyWrl","title3":"style__title3___1HOPW","title7":"style__title7___2tzA4","subtitle":"style__subtitle___28u9N","title8":"style__title8___2p7DZ","paragraph1":"style__paragraph1___3jelK","paragraph2":"style__paragraph2___3QqbA","paragraph":"style__paragraph___2nuu4","paragraph3":"style__paragraph3___2muKz","paragraph4":"style__paragraph4___1geTk","paragraph5":"style__paragraph5___30-m9","slide":"style__slide___1g7hl","overbanner":"style__overbanner___2RmA_","controls":"style__controls___MnoRe","bannerContainer":"style__bannerContainer___1enrP"};
 
 /***/ },
 /* 52 */
@@ -3161,7 +3175,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___zkvoI","vCenter":"style__vCenter___1amrF","arrow":"style__arrow___YRQ8M","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu","image1":"style__image1___1XYmO","image":"style__image___3La5m","paragraph1":"style__paragraph1___GDSgG","paragraph2":"style__paragraph2___YHIz0","paragraph":"style__paragraph___altZf","paragraph3":"style__paragraph3___3TUGd","paragraph4":"style__paragraph4___36NX-","paragraph5":"style__paragraph5___1IKiM","sideSwipe":"style__sideSwipe___10nak","button1":"style__button1___1wRom","button":"style__button___f4bc2","button2":"style__button2___2IfG_","button3":"style__button3___90xKI","title1":"style__title1___1ALfY","subtitle":"style__subtitle___2oUeT","title2":"style__title2___1rAMk","title4":"style__title4___2PoEp","title5":"style__title5___3oOGE","title6":"style__title6___3AN-Q","title":"style__title___2mlf9","title3":"style__title3___3_np7","title7":"style__title7___JQtWA","title8":"style__title8___1nNSa","wrapper":"style__wrapper___1BJ7Q","hr":"style__hr___37AfO","controls":"style__controls___1nXQ8"};
+	module.exports = {"fCenter":"style__fCenter___zkvoI","arrow":"style__arrow___YRQ8M","vCenter":"style__vCenter___1amrF","vCenterRel":"style__vCenterRel___dRIh_","hCenter":"style__hCenter___3ATdP","inheritHeight":"style__inheritHeight___35WI7","hideOverflow":"style__hideOverflow___1PqV_","icon-sprites":"style__icon-sprites___1wvNu","image1":"style__image1___1XYmO","image":"style__image___3La5m","paragraph1":"style__paragraph1___GDSgG","paragraph2":"style__paragraph2___YHIz0","paragraph":"style__paragraph___altZf","paragraph3":"style__paragraph3___3TUGd","paragraph4":"style__paragraph4___36NX-","paragraph5":"style__paragraph5___1IKiM","sideSwipe":"style__sideSwipe___10nak","button1":"style__button1___1wRom","button":"style__button___f4bc2","button2":"style__button2___2IfG_","button3":"style__button3___90xKI","title1":"style__title1___1ALfY","subtitle":"style__subtitle___2oUeT","title2":"style__title2___1rAMk","title4":"style__title4___2PoEp","title5":"style__title5___3oOGE","title6":"style__title6___3AN-Q","title":"style__title___2mlf9","title3":"style__title3___3_np7","title7":"style__title7___JQtWA","title8":"style__title8___1nNSa","wrapper":"style__wrapper___1BJ7Q","hr":"style__hr___37AfO","controls":"style__controls___1nXQ8"};
 
 /***/ },
 /* 54 */
@@ -3229,7 +3243,7 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-sm-6 col-xs-12' },
+	              { className: 'col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-1 col-xs-12' },
 	              _react2.default.createElement(
 	                'h2',
 	                { className: style.title },
@@ -3336,15 +3350,16 @@
 	      var block2 = _props$data.block2;
 	      var block3 = _props$data.block3;
 
+	      var block1classes = 'col-xs-12 col-sm-6 col-sm-offset-3';
 	      var classes = {
 	        svg: style.svg,
-	        col1: 'col-xs-12 col-sm-5',
-	        col2: 'col-xs-12 col-sm-7'
+	        col1: 'col-xs-12 col-sm-5 ',
+	        col2: 'col-xs-12 col-sm-7 '
 	      };
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_block2.default, { data: block1 }),
+	        _react2.default.createElement(_block2.default, { data: block1, classes: block1classes }),
 	        _react2.default.createElement(_block4.default, { data: block2, classes: classes }),
 	        _react2.default.createElement(_block6.default, { data: block3 })
 	      ) : null;
@@ -3474,7 +3489,7 @@
 	              _react2.default.createElement(
 	                'h3',
 	                { className: style.subtitle },
-	                titles.title4
+	                titles.title5
 	              ),
 	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph4) })
 	            )
@@ -3595,8 +3610,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(4);
-
 	var _lodash = __webpack_require__(6);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
@@ -3626,16 +3639,15 @@
 	      var _props$data = this.props.data;
 	      var images = _props$data.images;
 	      var buttons = _props$data.buttons;
-	      // const imgUrl = images && images.image1 && images.image1.src ? images.image1.src.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/contacto_map.png';
 
-	      var imgUrl = '/images/contacto_map.jpg';
+	      var imgUrl = images && images.image1 && images.image1.src ? images.image1.src.replace('www.dropbox.com', 'dl.dropboxusercontent.com') : '/images/contacto_map.png';
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement('img', { cassName: style.image, src: imgUrl, alt: images.image1.alt }),
 	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { className: style.button, to: buttons.button1.href },
+	          'a',
+	          { className: style.button, href: buttons.button1.href, target: '_blank' },
 	          buttons.button1.title
 	        )
 	      ) : null;
@@ -3675,8 +3687,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(4);
-
 	var _lodash = __webpack_require__(6);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
@@ -3684,10 +3694,6 @@
 	var _svg = __webpack_require__(18);
 
 	var _svg2 = _interopRequireDefault(_svg);
-
-	var _sanitize = __webpack_require__(37);
-
-	var _sanitize2 = _interopRequireDefault(_sanitize);
 
 	var _form = __webpack_require__(65);
 
@@ -3739,16 +3745,36 @@
 	                titles.title1,
 	                _react2.default.createElement(_svg2.default, { network: 'location', className: style.svg })
 	              ),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph2) }),
 	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: style.gmap, to: buttons.button1.href },
+	                'p',
+	                { className: style.paragraph },
+	                paragraphs.paragraph1
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: style.paragraph },
+	                paragraphs.paragraph2
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                { className: style.gmap, href: buttons.button1.href, target: '_blank' },
 	                buttons.button1.title
 	              ),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph3) }),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph4) }),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph5) })
+	              _react2.default.createElement(
+	                'p',
+	                { className: style.paragraph },
+	                paragraphs.paragraph3
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: style.paragraph },
+	                paragraphs.paragraph4
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                { className: style.paragraph, href: buttons.button2.href, target: '_blank' },
+	                buttons.button2.title
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -3756,9 +3782,13 @@
 	              _react2.default.createElement(
 	                'h2',
 	                { className: style.title },
-	                titles.title1
+	                titles.title2
 	              ),
-	              _react2.default.createElement('p', { className: style.paragraph, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph6) }),
+	              _react2.default.createElement(
+	                'p',
+	                { className: style.paragraph },
+	                paragraphs.paragraph6
+	              ),
 	              _react2.default.createElement(_form2.default, null)
 	            )
 	          )
@@ -3974,12 +4004,12 @@
 	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_name', className: 'col-xs-3 control-label' },
+	            { id: 'lab_name', className: 'col-xs-2 control-label' },
 	            'Nombre:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-xs-9' },
+	            { className: 'col-xs-10' },
 	            _react2.default.createElement('input', { type: 'text', name: 'name', onChange: this.onChangeHandler, value: name.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
@@ -3989,12 +4019,12 @@
 	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_email', className: 'col-xs-3 control-label' },
+	            { id: 'lab_email', className: 'col-xs-2 control-label' },
 	            'Correo:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-xs-9' },
+	            { className: 'col-xs-10' },
 	            _react2.default.createElement('input', { type: 'text', name: 'email', onChange: this.onChangeHandler, value: email.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
@@ -4004,12 +4034,12 @@
 	          { className: 'form-group ' + style.formGroup },
 	          _react2.default.createElement(
 	            'label',
-	            { id: 'lab_tel', className: 'col-xs-3 control-label' },
+	            { id: 'lab_tel', className: 'col-xs-2 control-label' },
 	            'Teléfono:'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-xs-9' },
+	            { className: 'col-xs-10' },
 	            _react2.default.createElement('input', { type: 'tel', name: 'tel', onChange: this.onChangeHandler, value: tel.value })
 	          ),
 	          _react2.default.createElement('div', { className: style.borderBottom2 })
