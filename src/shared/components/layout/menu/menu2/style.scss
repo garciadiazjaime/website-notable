@@ -5,7 +5,7 @@ $height: 50px;
 $background-color: $blue;
 // - links -
 $link-color: $white;
-$hover-color: $salmon!important;
+$hover-color: $gold!important;
 $active: $gold;
 $menuFont: $fontB;
 $menuFontSize: 13px;
@@ -127,11 +127,11 @@ $hamburger-background: lighten($blue, 10%)!important;
         width: 23px;
         height: 23px;
         circle {
-          fill: #3b5998;
+          fill: #0074c8;
         }
         &:hover{
           circle {
-            fill: lighten(#3b5998, 10%);
+            fill: lighten(#0074c8, 10%);
           }
           path {
             fill: #fff;
@@ -203,14 +203,13 @@ $hamburger-background: lighten($blue, 10%)!important;
     z-index: 1000;
     float: none;
     border-bottom: 1px solid $collapse-border-color;
-    border-top: 2px solid $collapse-border-color;
     li {
       height: auto;
       padding: 15px 0;
     }
   }
   .navbarIcons{
-    display: none;
+    display: none!important;
   }
   .navbarNav {
     float: none!important;
@@ -223,6 +222,9 @@ $hamburger-background: lighten($blue, 10%)!important;
       position: relative;
       @include transform(translateY(0));
       top: 0;
+      text-align: center;
+      padding-right: 0!important;
+      line-height: 40px;
     }
   }
 }
