@@ -24368,6 +24368,8 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint max-len: [2, 500, 4] */
 
 
+	var doMenuAnimation = true;
+
 	var AppHandler = function (_React$Component) {
 	  _inherits(AppHandler, _React$Component);
 
@@ -24428,13 +24430,18 @@
 	        $('.navbar-icons').css('display', 'block');
 	      } else {
 	        if (offset > 386) {
-	          $('#menu_wrapper').addClass('navbar-fixed-top');
-	          $('.navbar-brand').css('display', 'block');
-	          $('.navbar-icons').css('display', 'block');
+	          if (doMenuAnimation) {
+	            $('#menu_wrapper').css('display', 'none');
+	            $('.navbar-brand').css('display', 'block');
+	            $('.navbar-icons').css('display', 'block');
+	            $('#menu_wrapper').addClass('navbar-fixed-top').fadeIn('slow');
+	            doMenuAnimation = false;
+	          }
 	        } else {
 	          $('#menu_wrapper').removeClass('navbar-fixed-top');
 	          $('.navbar-brand').css('display', 'none');
 	          $('.navbar-icons').css('display', 'none');
+	          doMenuAnimation = true;
 	        }
 	      }
 	    }
@@ -37151,7 +37158,7 @@
 	            'svg',
 	            { xmlns: 'http://www.w3.org/2000/svg', width: '30', height: '30', viewBox: '0 0 30 30', className: className },
 	            _react2.default.createElement('circle', { cx: '15', cy: '15', r: '15' }),
-	            _react2.default.createElement('path', { d: 'M16.6 25.1v-9.2h3.2l0.5-3.6h-3.7v-2.3c0-1 0.3-1.7 1.9-1.7l2 0V5.1c-0.3 0-1.5-0.1-2.9-0.1 -2.9 0-4.8 1.7-4.8 4.7v2.6H9.5v3.6h3.2v9.2H16.6z' })
+	            _react2.default.createElement('path', { transform: 'scale(.8) translate(4, 4)', d: 'M16.6 25.1v-9.2h3.2l0.5-3.6h-3.7v-2.3c0-1 0.3-1.7 1.9-1.7l2 0V5.1c-0.3 0-1.5-0.1-2.9-0.1 -2.9 0-4.8 1.7-4.8 4.7v2.6H9.5v3.6h3.2v9.2H16.6z' })
 	          );
 	          break;
 	        case 'twitter':
@@ -42654,7 +42661,7 @@
 	        null,
 	        _react2.default.createElement(
 	          _carousel2.default,
-	          { id: 'main-carousel2', interval: 8000, indicators: false, controls: false, classes: carouselClasses },
+	          { id: 'main-carousel2', interval: 8000, indicators: false, classes: carouselClasses },
 	          this.renderItems(slides)
 	        )
 	      ) : null;
@@ -42837,7 +42844,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","sideSwipe":"style__sideSwipe___1_Jvs","button1":"style__button1___3teya","button2":"style__button2___3emCl","button3":"style__button3___1egvE","title1":"style__title1___1fgRn","title2":"style__title2___3VQJ-","title4":"style__title4___GbpGB","title5":"style__title5___21deO","title6":"style__title6___2x7FO","title3":"style__title3___15G1J","mainTitle":"style__mainTitle___2YLHB","title7":"style__title7___1Pacu","title8":"style__title8___1BoeB","item":"style__item___1hdp3","logo":"style__logo___2ohm4","base":"style__base___3O-48","heightFix":"style__heightFix___25O8x","title":"style__title___2u_GP"};
+	module.exports = {"fCenter":"style__fCenter___1IAv0","vCenter":"style__vCenter___3op1c","vCenterRel":"style__vCenterRel___3rmpk","hCenter":"style__hCenter___bN1_x","inheritHeight":"style__inheritHeight___3EV0T","hideOverflow":"style__hideOverflow___1jYcy","icon-sprites":"style__icon-sprites___113mW","sideSwipe":"style__sideSwipe___1_Jvs","button1":"style__button1___3teya","button2":"style__button2___3emCl","button3":"style__button3___1egvE","title1":"style__title1___1fgRn","title2":"style__title2___3VQJ-","title4":"style__title4___GbpGB","title5":"style__title5___21deO","title6":"style__title6___2x7FO","title3":"style__title3___15G1J","mainTitle":"style__mainTitle___2YLHB","title7":"style__title7___1Pacu","title8":"style__title8___1BoeB","item":"style__item___1hdp3","logo":"style__logo___2ohm4","base":"style__base___3O-48","heightFix":"style__heightFix___25O8x","controls":"style__controls___15CM-","title":"style__title___2u_GP"};
 
 /***/ },
 /* 270 */
@@ -43290,8 +43297,6 @@
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _reactRouter = __webpack_require__(160);
-
 	var _svg = __webpack_require__(213);
 
 	var _svg2 = _interopRequireDefault(_svg);
@@ -43352,11 +43357,7 @@
 	                titles.title1
 	              ),
 	              _react2.default.createElement('p', { className: style.paragraph3, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/inicio' },
-	                _react2.default.createElement(_svg2.default, { network: 'double_arrow_down', className: style.svg })
-	              )
+	              _react2.default.createElement(_svg2.default, { network: 'double_arrow_down', className: style.svg })
 	            )
 	          )
 	        )

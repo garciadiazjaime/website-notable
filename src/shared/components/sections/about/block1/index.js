@@ -1,7 +1,6 @@
 /* eslint max-len: [2, 500, 4] */
 import React from 'react';
 import _ from 'lodash';
-import { Link } from 'react-router';
 import SVG from '../../../svg';
 import setImageAsBackground from '../../../../utils/setImageAsBackground';
 import sanitizeUtil from '../../../../utils/sanitize';
@@ -20,9 +19,7 @@ export default class Block1 extends React.Component {
           <div className={this.props.classes}>
             <h2 className={style.title3}>{titles.title1}</h2>
             <p className={style.paragraph3} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
-            <Link to="/inicio">
-              <SVG network="double_arrow_down" className={style.svg}/>
-            </Link>
+            <SVG network="double_arrow_down" className={style.svg}/>
           </div>
         </div>
       </div>

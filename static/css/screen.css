@@ -115,7 +115,7 @@
   color: #fff;
   text-transform: uppercase; }
   .style__navbarNavAnchor___YxE1v:hover, .style__navbarNavAnchor___YxE1v:focus {
-    color: #FFB69F !important;
+    color: #CBA764 !important;
     background-color: transparent !important; }
 
 .style__navbarIcons___dr1qz {
@@ -143,9 +143,9 @@
         width: 23px;
         height: 23px; }
         .style__navbarIcons___dr1qz li .style__sm_icon___37x48 .style__facebook___1y0L5 circle {
-          fill: #3b5998; }
+          fill: #0074c8; }
         .style__navbarIcons___dr1qz li .style__sm_icon___37x48 .style__facebook___1y0L5:hover circle {
-          fill: #4c70ba; }
+          fill: #0092fb; }
         .style__navbarIcons___dr1qz li .style__sm_icon___37x48 .style__facebook___1y0L5:hover path {
           fill: #fff; }
       .style__navbarIcons___dr1qz li .style__sm_icon___37x48 .style__twitter___2iWZj:hover circle {
@@ -184,13 +184,12 @@
     position: relative;
     z-index: 1000;
     float: none;
-    border-bottom: 1px solid #fff;
-    border-top: 2px solid #fff; }
+    border-bottom: 1px solid #fff; }
     .style__navbarCollapse___2MKlE li {
       height: auto;
       padding: 15px 0; }
   .style__navbarIcons___dr1qz {
-    display: none; }
+    display: none !important; }
   .style__navbarNav___hhE6c {
     float: none !important;
     margin: 0;
@@ -204,7 +203,10 @@
       -ms-transform: translateY(0);
       -webkit-transform: translateY(0);
       transform: translateY(0);
-      top: 0; } }
+      top: 0;
+      text-align: center;
+      padding-right: 0 !important;
+      line-height: 40px; } }
 .style__fCenter___1OtUJ {
   position: absolute;
   top: 50%;
@@ -603,7 +605,8 @@
   letter-spacing: 4px; }
 
 .style__item___1hdp3 {
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 .style__logo___2ohm4 {
   width: 65px;
@@ -630,9 +633,20 @@
 .style__heightFix___25O8x {
   min-height: 619px; }
 
+.style__controls___15CM- {
+  background-image: none !important;
+  background: none;
+  opacity: 1;
+  height: 334px;
+  width: 118px; }
+  .style__controls___15CM- svg {
+    margin-top: 30px; }
+
 @media only screen and (max-width: 767px) {
   .style__title___2u_GP {
-    font-size: 25px; } }
+    font-size: 25px; }
+  .style__controls___15CM- {
+    width: 50px; } }
 .style__fCenter___ByilZ {
   position: absolute;
   top: 50%;
@@ -1939,7 +1953,8 @@
 .style__mainbanner___3hjPv {
   height: 619px;
   padding-top: 220px;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 .style__title3___1URy1 {
   text-align: center;
@@ -3152,7 +3167,8 @@
 
 .style__paragraph4___1Nxee {
   text-align: center;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  font-family: "Open Sans", sans-serif; }
 
 .style__wrapper___NEBTv {
   background: none; }
@@ -3520,8 +3536,8 @@
 
 .style__slide___1g7hl {
   height: 619px;
-  background-size: cover;
-  background-position: center center; }
+  background-position: center top;
+  background-repeat: no-repeat; }
 
 .style__overbanner___2RmA_ {
   height: 619px;

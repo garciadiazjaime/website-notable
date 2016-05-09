@@ -8,6 +8,7 @@ import Footer from './layout/footer/footer2';
 import scrollUtil from '../utils/scroll';
 import menuUtil from '../utils/menu';
 import restClient from '../../server/helpers/rest-client';
+let doMenuAnimation = true;
 
 
 export default class AppHandler extends React.Component {
@@ -59,13 +60,18 @@ export default class AppHandler extends React.Component {
       $('.navbar-icons').css('display', 'block');
     } else {
       if (offset > 386) {
-        $('#menu_wrapper').addClass('navbar-fixed-top');
-        $('.navbar-brand').css('display', 'block');
-        $('.navbar-icons').css('display', 'block');
+        if (doMenuAnimation) {
+          $('#menu_wrapper').css('display', 'none');
+          $('.navbar-brand').css('display', 'block');
+          $('.navbar-icons').css('display', 'block');
+          $('#menu_wrapper').addClass('navbar-fixed-top').fadeIn('slow');
+          doMenuAnimation = false;
+        }
       } else {
         $('#menu_wrapper').removeClass('navbar-fixed-top');
         $('.navbar-brand').css('display', 'none');
         $('.navbar-icons').css('display', 'none');
+        doMenuAnimation = true;
       }
     }
   }

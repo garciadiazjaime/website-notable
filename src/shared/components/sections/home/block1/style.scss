@@ -4,6 +4,7 @@
 
 .item{
 	background-size: cover;
+	background-position: center center;
 }
 .logo{
 	width: 65px;
@@ -35,9 +36,23 @@
  	min-height: 619px;
  }
 
+ .controls{
+ 	background-image: none!important;
+ 	background: none;
+ 	opacity: 1;
+ 	height: 334px;
+ 	width: 118px;
+ 	svg{
+ 		margin-top: 30px;
+ 	}
+ }
+
 // --- Responsive
 @media #{$isPhone}{
   .title{
     font-size: 25px;
   }
+	.controls{
+		width: 50px;
+	}
 }
