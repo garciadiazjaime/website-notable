@@ -39,7 +39,7 @@ export default {
   },
   icons: [{
     title: 'facebook',
-    url: 'https://www.facebook.com/',
+    url: 'https://www.facebook.com/notablemobiliario/',
   }],
   addresses: [{
     title: 'Tijuana',
