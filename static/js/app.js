@@ -44173,10 +44173,6 @@
 
 	var _block6 = _interopRequireDefault(_block5);
 
-	var _carousel = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../../../elements/carousel\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44197,33 +44193,6 @@
 	  }
 
 	  _createClass(ServicesSection, [{
-	    key: 'renderItems',
-	    value: function renderItems(data) {
-	      var block1classes = 'col-xs-12 col-sm-6 col-sm-offset-3';
-	      if (_lodash2.default.isArray(data) && data.length) {
-	        return data.map(function (item, index) {
-	          var blockData = {
-	            titles: {
-	              title1: item.title
-	            },
-	            paragraphs: {
-	              paragraph1: item.content
-	            },
-	            images: {
-	              image1: item.image
-	            }
-	          };
-	          var className = index === 0 ? 'active' : '';
-	          return _react2.default.createElement(
-	            'div',
-	            { className: 'item ' + className, key: index },
-	            _react2.default.createElement(_block2.default, { data: blockData, classes: block1classes })
-	          );
-	        });
-	      }
-	      return null;
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _props$data = this.props.data;
@@ -44231,27 +44200,16 @@
 	      var block2 = _props$data.block2;
 	      var block3 = _props$data.block3;
 
+	      var block1classes = 'col-xs-12 col-sm-6 col-sm-offset-3';
 	      var classes = {
 	        svg: style.svg,
 	        col1: 'col-xs-12 col-sm-5 ',
 	        col2: 'col-xs-12 col-sm-7 '
 	      };
-	      var carouselClasses = {
-	        inner: style.inner,
-	        controls: {
-	          base: style.controls,
-	          prev: style.prev,
-	          next: style.next
-	        }
-	      };
 	      return !_lodash2.default.isEmpty(this.props.data) ? _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	          _carousel2.default,
-	          { id: 'services-carousel', interval: 8000, indicators: false, classes: carouselClasses },
-	          this.renderItems(block1.slides)
-	        ),
+	        _react2.default.createElement(_block2.default, { data: block1, classes: block1classes }),
 	        _react2.default.createElement(_block4.default, { data: block2, classes: classes }),
 	        _react2.default.createElement(_block6.default, { data: block3 })
 	      ) : null;
