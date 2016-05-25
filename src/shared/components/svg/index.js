@@ -34,6 +34,17 @@ export default class SVG extends React.Component {
             <path d="M10.7 0v12L0 5.3v13.7l1.4 0.9v-2.3l0 0V7.8l9.3 5.9v0l3.9 2.5v10.4 0l0 1.7 1.4 0.9v-12.1l10.7 6.8v-13.8L10.7 0zM25.4 21.3l-9.3-5.9 -3.9-2.5V2.5l13.2 8.3V21.3z" fill="#c59f67"/>
           </svg>);
         break;
+        case 'arrow_down':
+          return (<svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 7.7" className={className}>
+            <polyline points="0.4 0.5 7 7.1 13.6 0.4 " fill="none" stroke="#FFF"/>
+          </svg>);
+          break;
+        case 'circled_brand':
+          return (<svg xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94.5 94.5" className={className}>
+            <circle cx="47.2" cy="47.2" r="47.2" fill="#CBA764"/>
+            <path d="M44 27.7v15.7l-14-8.8v17.9l1.8 1.1v-2.9l0 0V37.9l12.1 7.6v0l5.1 3.2V62.3v-0.1l0 2.2 1.8 1.1V49.9l14 8.8V40.8L44 27.7zM63 55.4l-12.1-7.7L45.8 44.5V31l17.2 10.8V55.4z" fill="#FFF"/>
+          </svg>);
+          break;
       case 'double_arrow_down':
         return (<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 14.6 19.9" className={className}>
           <polygon points="7.3 8.7 0 1.4 1.4 0 7.3 5.9 13.2 0 14.6 1.4 " fill="#FFF"/>

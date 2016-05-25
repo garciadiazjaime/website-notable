@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { Link } from 'react-router';
 import Carousel from '../../../elements/carousel';
 import sanitizeUtil from '../../../../utils/sanitize';
+import SVG from '../../../svg';
 const style = require('./style.scss');
 
 
@@ -28,6 +29,9 @@ export default class Block3 extends React.Component {
               <div className="col-xs-12 col-sm-4 col-md-5">
                 <Link to={item.button_url} title={item.button_title} className={style.button}>
                   {item.button_title}
+                </Link>
+                <Link to={item.button_url} title={item.button_title} className={style.button_descargar}>
+                  DESCARGAR CATÁLOGO <SVG network="arrow_down" className={style.arrow_down}/>
                 </Link>
               </div>
             </div>

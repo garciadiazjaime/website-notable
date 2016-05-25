@@ -5,7 +5,10 @@ body{
 a:hover {
   text-decoration: none;
 }
-
+a:focus{
+  text-decoration: none;
+  color: #fff;
+}
 *:focus {outline:0px none transparent;}
 
 .container-fluid{

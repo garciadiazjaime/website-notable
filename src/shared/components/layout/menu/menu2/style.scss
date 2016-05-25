@@ -20,6 +20,9 @@ $collapse-border-color: $white;
 $hamburger-background: lighten($blue, 10%)!important;
 
 // ********** The full navbar *********************
+#app{
+  padding-top: 50px;
+}
 .navbarWrapper{
   padding: 50px 0 31px;
   background-color: $background-color;
