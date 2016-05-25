@@ -3,3 +3,8 @@
 @import '../../../../theme/buttons/buttons';
 @import '../../../../theme/images/images';
 @import '../../../../theme/constants';
+@media#{$isPhone}{
+  .image1{
+    margin: 0 auto;
+  }
+}

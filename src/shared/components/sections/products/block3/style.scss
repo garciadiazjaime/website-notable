@@ -19,6 +19,11 @@
   @extend .button1;
   float: right;
 }
+.button_descargar{
+  @extend .button;
+  margin-top: 25px;
+  padding-right: 20px;
+}
 .paragraph{
   @extend .paragraph2
 }
@@ -32,6 +37,11 @@
   height: 1px;
   background-color: $gold;
   margin: 0 0 25px;
+}
+.arrow_down{
+  position: absolute;
+  @extend .vCenter;
+  right: 10px;
 }
 
 // Carousel
@@ -49,5 +59,11 @@
   .controls{
     background: none;
     width: 50px;
+  }
+  .button{
+    float: left;
+  }
+  .arrow{
+    top: 20px;
   }
 }
