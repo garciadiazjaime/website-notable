@@ -1,0 +1,37 @@
+@import '../../../../theme/constants.scss';
+@import '../../../../theme/wrappers/wrappers';
+@import '../../../../theme/buttons/buttons';
+@import '../../../../theme/titles/titles';
+@import '../../../../theme/images/images';
+@import '../../../../theme/paragraphs/paragraphs';
+
+.commitment{
+  margin: 100px 0;
+}
+.svg{
+  margin-bottom: 50px;
+}
+.title7{
+  line-height: 30px;
+  font-size:15px;
+}
+.paragraph2{
+  margin-bottom: 50px;
+}
+.button1{
+  margin-left: 0;
+}
+.image{
+  @extend .image1;
+}
+.item{
+  height: 443px;
+  background-size: cover;
+}
+.controls{
+  background-image: none!important;
+  background-color: rgba(0,0,0,0);
+  svg {
+    @extend .fCenter;
+  }
+}

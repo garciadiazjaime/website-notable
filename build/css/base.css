@@ -5,7 +5,10 @@ body{
 a:hover {
   text-decoration: none;
 }
-
+a:focus{
+  text-decoration: none;
+  color: #fff;
+}
 *:focus {outline:0px none transparent;}
 
 .container-fluid{
@@ -18,4 +21,9 @@ img{
 
 #app{
 	overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+    #app {
+        margin-top: 50px;
+    }
 }
