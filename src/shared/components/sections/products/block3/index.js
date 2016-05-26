@@ -30,7 +30,7 @@ export default class Block3 extends React.Component {
                 <Link to={item.button_url} title={item.button_title} className={style.button}>
                   {item.button_title}
                 </Link>
-                <Link to={item.button_url} title={item.button_title} className={style.button_descargar}>
+                <Link to="https://dl.dropboxusercontent.com/s/k3w1vgfgiwfdd5l/CATALOGO%20NOTABLE%202016_low.pdf?dl=0" title={item.button_title} className={style.button_descargar} target="_blank">
                   DESCARGAR CATÁLOGO <SVG network="arrow_down" className={style.arrow_down}/>
                 </Link>
               </div>
