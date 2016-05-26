@@ -20,12 +20,14 @@ export default class Block1 extends React.Component {
             <div className="container-fluid">
               <div className="row">
                 <div className={'col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10px col-md-10-offset-1 ' + style.heightFix}>
-                  <div className={style.vCenter}>
-                    <SVG network="brand" className={style.logo}/>
-                    <h1 className={style.mainTitle}>{item.title}</h1>
-                    <Link to={item.button_url} title={item.button_title} className={style.button2}>
-                      {item.button_title}
-                    </Link>
+                  <div className="row">
+                    <div className={style.vCenter}>
+                      <SVG network="brand" className={style.logo}/>
+                      <h1 className={style.mainTitle}>{item.title}</h1>
+                      <Link to={item.button_url} title={item.button_title} className={style.button2}>
+                        {item.button_title}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

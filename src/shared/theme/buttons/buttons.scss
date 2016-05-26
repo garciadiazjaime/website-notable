@@ -36,7 +36,7 @@
   display: block;
   margin: 0 auto;
   width: 200px;
-  &:hover{
+  &:hover, &:focus{
     color: $white;
   }
   &::before{
@@ -55,7 +55,7 @@
   width: 166px;
   text-align: center;
   display: block;
-  &:hover{
+  &:hover, &:focus {
     color: $blue;
   }
   &::before{
@@ -68,7 +68,7 @@
   font-family: $fontA;
   line-height: 30px;
   font-weight: 600;
-  &:hover{
+  &:hover, &:focus{
     color: $blue;
   }
 }
