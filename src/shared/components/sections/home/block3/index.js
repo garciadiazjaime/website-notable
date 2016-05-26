@@ -17,6 +17,7 @@ export default class Block3 extends React.Component {
           <div className="col-xs-12 col-sm-10 col-sm-offset-1">
             <h2 className={style.title1}>{titles.title1}</h2>
             <p className={style.paragraph1} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
+            <p className={style.paragraph1}>En Notable más allá de adquirir un mueble de calidad, estás comprando una pieza de diseño tan bella, funcional y confortable, que sabemos que vivirás en ella momentos inolvidables.</p>
           </div>
         </div>
       </div>
