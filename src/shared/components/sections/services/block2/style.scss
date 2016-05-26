@@ -24,3 +24,14 @@
 .image{
   @extend .image1;
 }
+.item{
+  height: 443px;
+  background-size: cover;
+}
+.controls{
+  background-image: none!important;
+  background-color: rgba(0,0,0,0);
+  svg {
+    @extend .fCenter;
+  }
+}

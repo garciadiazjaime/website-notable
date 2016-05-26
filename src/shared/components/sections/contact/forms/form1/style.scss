@@ -17,7 +17,7 @@
   margin-right: 0!important;
   color: #bbbdbf;
   border-bottom: 1px solid #bbbdbf;
-  input, label {
+  label {
     border: none;
     color: inherit;
     display: inline-block;
@@ -26,6 +26,12 @@
     font-family: $fontA!important;
     font-weight: 400;
     padding-left: 0;
-
+  }
+  input, textarea{
+    font-family: $fontA;
+    color: $black!important;
+    background-color: transparent!important;
+    border: none;
+    width: 100%;
   }
 }
