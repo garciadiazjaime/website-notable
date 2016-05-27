@@ -2209,12 +2209,7 @@
 	                { className: style.title1 },
 	                titles.title1
 	              ),
-	              _react2.default.createElement('p', { className: style.paragraph1, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
-	              _react2.default.createElement(
-	                'p',
-	                { className: style.paragraph1 },
-	                'En Notable más allá de adquirir un mueble de calidad, estás comprando una pieza de diseño tan bella, funcional y confortable, que sabemos que vivirás en ella momentos inolvidables.'
-	              )
+	              _react2.default.createElement('p', { className: style.paragraph1, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) })
 	            )
 	          )
 	        )
@@ -2530,16 +2525,6 @@
 	                'h2',
 	                { className: style.title3 },
 	                titles.title1
-	              ),
-	              _react2.default.createElement(
-	                'h2',
-	                { className: style.title3 },
-	                'MOBILIARIO CONTEMPORÁNEO'
-	              ),
-	              _react2.default.createElement(
-	                'h2',
-	                { className: style.title3 },
-	                'MOBILIARIO CONTEMPORÁNEO'
 	              ),
 	              _react2.default.createElement('p', { className: style.paragraph3, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
 	              _react2.default.createElement(_svg2.default, { network: 'double_arrow_down', className: style.svg })
