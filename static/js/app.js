@@ -43383,7 +43383,7 @@
 	              _react2.default.createElement(
 	                'h2',
 	                { className: style.title3 },
-	                'MOBILIARIO CONTEMPORÁNEO'
+	                'MOBILIARIO CONTEMPORÁNEO'
 	              ),
 	              _react2.default.createElement('p', { className: style.paragraph3, dangerouslySetInnerHTML: (0, _sanitize2.default)(paragraphs.paragraph1) }),
 	              _react2.default.createElement(_svg2.default, { network: 'double_arrow_down', className: style.svg })

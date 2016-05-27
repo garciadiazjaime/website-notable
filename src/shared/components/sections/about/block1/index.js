@@ -18,7 +18,7 @@ export default class Block1 extends React.Component {
         <div className="row">
           <div className={this.props.classes}>
             <h2 className={style.title3}>{titles.title1}</h2>
-            <h2 className={style.title3}>MOBILIARIO CONTEMPORÁNEO</h2>
+            <h2 className={style.title3}>MOBILIARIO CONTEMPORÁNEO</h2>
             <p className={style.paragraph3} dangerouslySetInnerHTML={sanitizeUtil(paragraphs.paragraph1)} />
             <SVG network="double_arrow_down" className={style.svg}/>
           </div>
