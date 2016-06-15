@@ -20,6 +20,7 @@
 }
 .button1{
   margin-left: 0;
+  margin-bottom: 25px;
 }
 .image{
   @extend .image1;
@@ -27,11 +28,17 @@
 .item{
   height: 443px;
   background-size: cover;
+  background-position: center center;
 }
 .controls{
   background-image: none!important;
   background-color: rgba(0,0,0,0);
   svg {
     @extend .fCenter;
+  }
+}
+@media #{$isPhone}{
+  .item{
+    height: 300px;
   }
 }

@@ -24,4 +24,11 @@
   @extend .image1;
   border: 1px solid $gold;
   width: 100%;
+  margin-bottom: 0;
+}
+.controls{
+  background: none!important;
+  svg{
+    @extend .fCenter;
+  }
 }
