@@ -24,13 +24,13 @@ Deploy project
 `git diff`
 `npm run deploy`
 
-Docker Commands
+Code to increase jslint max line length limit
+/* eslint max-len: [2, 500, 4] */
+
+Docker commands
 ====
 
 docker build -t garciadiazjaime/website-notable .
-docker run -e "API_URL=http://45.55.12.200:49179/" -d -p 49172:3072 garciadiazjaime/website-notable
+docker run -d -p 49171:3071 garciadiazjaime/website-notable
 docker push garciadiazjaime/website-notable
 docker pull garciadiazjaime/website-notable
-
-Code to increase jslint max line length limit
-/* eslint max-len: [2, 500, 4] */
