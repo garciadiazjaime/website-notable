@@ -4035,7 +4035,7 @@
     float: left; }
   .style__arrow___YRQ8M {
     top: 20px; } }
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4081,7 +4081,7 @@
 .style__icon-sprites___xUhFv {
   background-image: url("/images/sprites/sprite-sprites.png"); }
 
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4131,7 +4131,7 @@
   display: block;
   margin-bottom: 25px; }
 
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4185,7 +4185,7 @@
   background-size: cover;
   height: 619px; }
 
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4268,7 +4268,7 @@
   line-height: 30px;
   font-weight: 600; }
 
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4374,7 +4374,7 @@
   .style__button3___1UDFh:hover, .style__button3___1UDFh:focus {
     color: #021A2D; }
 
-.style__fCenter___2OwT_ {
+.style__fCenter___2OwT_, .style__controls___3nGvH svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4508,7 +4508,11 @@
 
 .style__image___3_x2J {
   border: 1px solid #CBA764;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0; }
+
+.style__controls___3nGvH {
+  background: none !important; }
 .style__fCenter___1Q73D {
   position: absolute;
   top: 50%;
@@ -5231,15 +5235,21 @@
   margin-bottom: 50px; }
 
 .style__button1___2a8IJ {
-  margin-left: 0; }
+  margin-left: 0;
+  margin-bottom: 25px; }
 
 .style__item___20ywg {
   height: 443px;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 .style__controls____N_dT {
   background-image: none !important;
   background-color: transparent; }
+
+@media only screen and (max-width: 767px) {
+  .style__item___20ywg {
+    height: 300px; } }
 .style__fCenter___3oQI6 {
   position: absolute;
   top: 50%;
