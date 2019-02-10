@@ -34,3 +34,14 @@ docker build -t garciadiazjaime/website-notable .
 docker run -d -p 49171:3071 garciadiazjaime/website-notable
 docker push garciadiazjaime/website-notable
 docker pull garciadiazjaime/website-notable
+
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --domains www.notable.mx \
+     --no-parent \
+         www.notable.mx
